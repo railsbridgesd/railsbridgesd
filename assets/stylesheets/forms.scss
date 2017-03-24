@@ -1,2 +1,71 @@
 
 // FORMS
+
+.btn-primary {
+  background: $red;
+  color: $white;
+  border: none;
+  transition: background 0.2s;
+  &:hover {
+    background: $white;
+    color: $peach;
+  }
+}
+
+.btn-peach {
+  background: $peach;
+  border: 1px solid $white;
+  color: $white;
+  &:hover {
+    background: $white;
+    border: 1px solid $white;
+    color: $peach;
+  }
+}
+
+.btn-red {
+  background: $red;
+  color: $white;
+  &:hover {
+    background: $white;
+    color: $red;
+  }
+}
+
+.btn-purple {
+  background: $purple;
+  color: $white;
+  &:hover {
+    background: $white;
+    color: $purple;
+  }
+}
+
+.btn-green {
+  background: $green;
+  color: $white;
+  &:hover {
+    background: $white;
+    color: $green;
+  }
+}
+
+.btn-gray {
+  background: $gray;
+  color: $white;
+  &:hover {
+    background: $white;
+    color: $gray;
+  }
+}
+
+.btn-white {
+  background: $white;
+  border: 1px solid $white;
+  color: $peach;
+  &:hover {
+    background: $peach;
+    border: 1px solid $white;
+    color: $white;
+  }
+}
