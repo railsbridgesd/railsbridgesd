@@ -1,7 +1,3 @@
-require 'sinatra'
-require 'sprockets'
-require 'uglifier'
-require 'sass'
 
 # VIEWS
 set :haml, :format => :html5, :attr_wrapper => '"'
