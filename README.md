@@ -1,7 +1,6 @@
-# Railsbridge San Diego
-=======================
+# RailsBridge San Diego
 
-This is the website for RailsBridge San Diego.
+This is the website for http://www.railsbridgesd.org.
 
 ## Getting started
 
@@ -16,3 +15,8 @@ should happen automatically from the `.ruby-version` file)
 
 ### Launch the app
 1. Run `bundle exec shotgun config.ru -p 3000`
+
+## Gotchas
+
+- If you can't install the bundle, you might be missing the `bundler` gem.
+  - Run `gem install bundler` to install it.
