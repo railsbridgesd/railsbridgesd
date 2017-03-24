@@ -7,6 +7,16 @@ require 'sass'
 set :haml, :format => :html5, :attr_wrapper => '"'
 set :views, File.dirname(__FILE__) + "/views"
 
+# HELPERS
+def link_to(text,url,options={})
+  unless options.empty?
+    attributes = " " + options.map{|k,v| k.to_s + "=" + '"' + v + '" '}.join(" ")
+  else
+    attributes = ""
+  end
+  "<a href=#{url}" + attributes + ">#{text}</a>" 
+end
+
 # APP
 class RailsBridgeSanDiego < Sinatra::Base
   

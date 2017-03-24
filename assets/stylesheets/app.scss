@@ -1,8 +1,8 @@
 
 // STYLESHEETS
 
-//= require variables
-//= require layout
-//= require type
-//= require forms
-//= require responsive
+@import "variables";
+@import "layout";
+@import "type";
+@import "forms";
+@import "responsive";

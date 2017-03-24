@@ -1,4 +1,2 @@
 
 // JAVASCRIPTS
-
-//= require_tree .
