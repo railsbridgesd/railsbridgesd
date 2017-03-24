@@ -18,5 +18,4 @@ should happen automatically from the `.ruby-version` file)
 
 ## Gotchas
 
-- If you can't install the bundle, you might be missing the `bundler` gem.
-  `gem install bundler` to install it
+- If you can't install the bundle, you might be missing the `bundler` gem. Run `gem install bundler` to install it.
