@@ -1,6 +1,6 @@
-# Railsbridge San Diego
+# RailsBridge San Diego
 
-This is the website for RailsBridge San Diego.
+This is the website for http://www.railsbridgesd.org.
 
 ## Getting started
 
