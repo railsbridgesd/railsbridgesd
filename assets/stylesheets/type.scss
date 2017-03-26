@@ -5,10 +5,46 @@ h1, h2 {
   color: $peach;
 }
 
-h2 {
-  color: transparentize($white,0.5);
+
+.intro-content {
+  h2 {
+    text-align: center;
+    color: transparentize($white,0.5);
+    background-color: transparentize($peach,0.2);
+    display: inline-block;
+    margin: 10px 0px;
+  }
+}
+
+.peach-wrap {
+  h2 {
+    color: transparentize($white,0.5);
+  }
 }
 
 p {
   margin: 18px 0;
+}
+
+.navbar-default {
+  .navbar-nav {
+    li {
+      a{
+        color: $peach;
+        &:hover {
+          color: $red;
+        }
+      }
+    }
+  }
+}
+
+
+.footer {
+  i {
+    color: white;
+    color: transparentize($white,0.5);
+    font-size: 35px;
+    padding: 5px;
+  }
 }
