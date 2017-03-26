@@ -2,26 +2,10 @@
 
 body {
   background: $white;
-  padding-top: 60px;
 }
 
 hr {
   opacity: 0.2;
-}
-
-.navbar-default {
-  background-color: transparent;
-  border-bottom: none;
-  .navbar-nav {
-    li {
-      a{
-        color: $peach;
-        &:hover {
-          color: $red;
-        }
-      }
-    }
-  }
 }
 
 img {
@@ -29,48 +13,48 @@ img {
   height: 100px;
 }
 
+.navbar-default {
+  background-color: transparent;
+  border-bottom: none;
+}
+
+.container {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.peach-wrap {
+  background-color: $peach;
+  padding: 50px 70px;
+}
+
 #intro {
   background-image: url('https://static1.squarespace.com/static/55e34e63e4b06d04a994b9ff/t/57df6556e3df28c822caf3fd/1474258273652/');
-  text-align: center;
-  height: 600px;
+  height: 620px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  padding-top: 300px;
-
-}
-#about {
-
-}
-#faq {
-
-}
-#schedule {
-  background-color: $peach;
-  padding: 50px 70px;
-  .schedule-block {
-    background-color: rgba(255, 255, 255, .1);
-    border-radius: .2em;
-    // margin: 0px 90px;
-    padding: 5px 25px;
+  .intro-content {
+    padding-top: 290px;
+    display: block;
   }
-
-
 }
-#volunteer {
 
-}
-#resources {
-
+.schedule-block {
+  background-color: rgba(255, 255, 255, .1);
+  border-radius: .2em;
+  margin: 20px;
+  padding: 5px 25px;
 }
 
 .footer {
-  padding: 20px 20px;
-  background-color: $peach;
-  i {
-    color: white;
-    color: transparentize($white,0.5);
-    font-size: 35px;
-    padding-right: 4px;
+  .contact-placeholder {
+    height: 290px;
+    background-color: rgba(255, 255, 255, .1);
+  }
+  .tweet-placeholder {
+    height: 150px;
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, .1);
   }
 }
