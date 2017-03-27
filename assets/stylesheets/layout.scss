@@ -44,16 +44,17 @@ img {
     display: block;
     margin: 0 auto;
     padding-top: 160px;
-    width: 30%;
+    width: 45%;
     h2 {
-      background-color: transparentize($peach,0.2);
-      color:            transparentize($white,0.5);
+      // background-color: transparentize($peach,0.2);
+      // color:            transparentize($white,0.5);
+      background-color: rgba(179, 40, 45, 0.6);
+      color:            $white;
       display: inline;
       line-height: 1.3em;
-      margin: 10px 0px;
 
       span {
-        padding: .5em;
+        padding: .3em;
       }
     }
   }
