@@ -13,9 +13,15 @@ img {
   height: 100px;
 }
 
-.navbar-default {
+.navbar {
   background-color: transparent;
   border-bottom: none;
+  transition: all 0.5s ease-out;
+  background-color: rgba(179, 40, 45, 0.6);
+  &.scrolled {
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+  }
 }
 
 .container {

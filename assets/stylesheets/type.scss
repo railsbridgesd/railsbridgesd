@@ -5,6 +5,11 @@ h1, h2 {
   color: $peach;
 }
 
+h3 {
+  &.sample {
+    margin-top: 60px;
+  }
+}
 
 .intro-content {
   h2 {
@@ -30,9 +35,19 @@ p {
   .navbar-nav {
     li {
       a{
+        color: $white;
+        &:hover {
+          color: $peach;
+        }
+      }
+    }
+  }
+  &.scrolled {
+    li {
+      a {
         color: $peach;
         &:hover {
-          color: $red;
+          color: $red
         }
       }
     }
