@@ -20,16 +20,6 @@ h3 {
   }
 }
 
-.intro-content {
-  h2 {
-    text-align: center;
-    color: transparentize($white,0.5);
-    background-color: transparentize($peach,0.2);
-    display: inline-block;
-    margin: 10px 0px;
-  }
-}
-
 #schedule {
   h1 {
     color: #fff;
@@ -53,12 +43,18 @@ p {
 
 .navbar-default {
   .navbar-nav {
-    li {
-      a{
+    li a{
+      color: $white;
+      &:hover {
         color: $peach;
-        &:hover {
-          color: $red;
-        }
+      }
+    }
+  }
+  &.scrolled {
+    li a {
+      color: $peach;
+      &:hover {
+        color: $red
       }
     }
   }
