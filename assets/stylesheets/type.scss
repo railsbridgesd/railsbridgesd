@@ -5,7 +5,16 @@ h1, h2 {
   color: $peach;
 }
 
+h1 {
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
 h3 {
+  font-size: 18px;
   &.sample {
     margin-top: 60px;
   }
@@ -20,6 +29,17 @@ h3 {
 //     margin: 10px 0px;
 //   }
 // }
+
+#schedule {
+  h1 {
+    color: #fff;
+  }
+}
+
+#faq h2 {
+  color: #333;
+  font-size: 18px;
+}
 
 .peach-wrap {
   h2 {
