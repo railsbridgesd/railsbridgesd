@@ -1,0 +1,19 @@
+%form
+  .form-group
+    %label{for: "inputName"} Name
+    %input.form-control{type: "text", id: "inputName", placeholder: "Enter name"}
+  .form-group
+    %label{for: "inputEmail"} Email
+    %input.form-control{type: "email", id: "inputEmail", placeholder: "Enter email"}
+  .form-group
+    %label{for: "interestType"} Get involved!
+    %select.form-control#interestType
+      %option{class: "prompt"} Select your interest type so we can better help you
+      %option{value: 'Student'} Student
+      %option{value: 'Volunteer'} Volunteer
+      %option{value: 'Sponsor'} Sponsor
+      %option{value: 'Organizer'} Organizer
+  .form-group
+    %label{for: "inputMessage"} Message
+    %input.form-control{type: "text", id: "inputMessage", placeholder: "Include a message (optional)"}
+  %button.btn.btn-primary{type: "submit"} Submit
