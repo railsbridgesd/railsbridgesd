@@ -7,47 +7,47 @@
 
     #content
     
-      %h1 RailsBridge San Diego
+      .container
       
-      %h2 RailsBridge is a day and a half FREE workshop that will take students through building a complete web application using Ruby on Rails.
+        %h3.sample Sample text
 
-      %p= link_to "Sign Up", "https://www.bridgetroll.org/events/342", class: "btn btn-primary"
+        %h1 Headline
+        
+        %h2 Headline
 
-      %hr
+        %h3.sample Sample buttons
+        
+        %p
+          = link_to "Peach", "https://www.bridgetroll.org/events/342", class: "btn btn-primary btn-peach"
+          = link_to "Red", "https://www.bridgetroll.org/events/342", class: "btn btn-primary btn-red"
+          = link_to "Purple", "https://www.bridgetroll.org/events/342", class: "btn btn-primary btn-purple"
+          = link_to "Green", "https://www.bridgetroll.org/events/342", class: "btn btn-primary btn-green"
+          = link_to "Gray", "https://www.bridgetroll.org/events/342", class: "btn btn-primary btn-gray"
+          = link_to "White", "https://www.bridgetroll.org/events/342", class: "btn btn-primary btn-white"
 
-      %h3 Sample buttons
-      
-      %p
-        = link_to "Peach", "https://www.bridgetroll.org/events/342", class: "btn btn-primary btn-peach"
-        = link_to "Red", "https://www.bridgetroll.org/events/342", class: "btn btn-primary btn-red"
-        = link_to "Purple", "https://www.bridgetroll.org/events/342", class: "btn btn-primary btn-purple"
-        = link_to "Green", "https://www.bridgetroll.org/events/342", class: "btn btn-primary btn-green"
-        = link_to "Gray", "https://www.bridgetroll.org/events/342", class: "btn btn-primary btn-gray"
-        = link_to "White", "https://www.bridgetroll.org/events/342", class: "btn btn-primary btn-white"
+        %h3.sample Sample responsive image
+        
+        %p To make a responsive, you should create two image files, one at @1x resolution and one at @2x resolution.
+        
+        %ul
+          %li my_image@1x.jpg <= 128x128 pixels
+          %li my_image@2x.jpg <= 256x256 pixels
 
-      %h3 Sample responsive image
-      
-      %p To make a responsive, you should create two image files, one at @1x resolution and one at @2x resolution.
-      
-      %ul
-        %li my_image@1x.jpg <= 128x128 pixels
-        %li my_image@2x.jpg <= 256x256 pixels
+        %p Then use the image_tag helper like so...
 
-      %p Then use the image_tag helper like so...
+        %ul
+          %li image_tag("assets/logo@1x.png", :size => "128x128")
 
-      %ul
-        %li image_tag("assets/logo@1x.png", :size => "128x128")
+        %p When rendered by the browser, the image will be 128 x 128 pixels in size... but browsers that support retina images will load the 2x version of the image and it will look sharper on the page.
+        
+        %p Note: images can be any size. Just make sure your 2x image is twice the size of the your 1x image.
+        
+        %p
+          = image_tag("assets/logo@1x.png", :size => "128x128")
 
-      %p When rendered by the browser, the image will be 128 x 128 pixels in size... but browsers that support retina images will load the 2x version of the image and it will look sharper on the page.
-      
-      %p Note: images can be any size. Just make sure your 2x image is twice the size of the your 1x image.
-      
-      %p
-        = image_tag("assets/logo@1x.png", :size => "128x128")
-
-      %h3 Sample image
-      
-      %p
-        = image_tag("assets/railsbridge.jpg", :size => "500x300")
+        %h3.sample Sample normal image
+        
+        %p
+          = image_tag("assets/railsbridge.jpg", :size => "500x300")
 
     = haml :footer
