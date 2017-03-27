@@ -21,15 +21,22 @@ img {
   .navbar-brand {
     color: #fff;
     font-weight: bold;
+    background: url("/assets/brand_white.png") center left;
+    background-repeat: no-repeat;
+    background-size: 18%;
+    padding-left: 50px;
+    margin-left: 0px !important;
   }
   &.scrolled {
     background-color: #fff;
     border-bottom: 1px solid #eee;
     .navbar-brand {
+      background: url("/assets/brand_peach.png") center left;
+      background-repeat: no-repeat;
+      background-size: 18%;
       color: $peach;
     }
   }
-
 }
 
 .container {
