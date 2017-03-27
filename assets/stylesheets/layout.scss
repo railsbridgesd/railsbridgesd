@@ -14,14 +14,22 @@ img {
 }
 
 .navbar {
-  background-color: transparent;
+  background-color: $peach;
   border-bottom: none;
   transition: all 0.5s ease-out;
-  background-color: rgba(179, 40, 45, 0.6);
+  // background-color: rgba(179, 40, 45, 0.6);
+  .navbar-brand {
+    color: #fff;
+    font-weight: bold;
+  }
   &.scrolled {
     background-color: #fff;
     border-bottom: 1px solid #eee;
+    .navbar-brand {
+      color: $peach;
+    }
   }
+
 }
 
 .container {
