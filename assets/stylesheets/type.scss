@@ -46,7 +46,8 @@ p {
     li a{
       color: $white;
       &:hover {
-        color: $peach;
+        color: $white;
+        text-decoration: underline;
       }
     }
   }
@@ -54,7 +55,8 @@ p {
     li a {
       color: $peach;
       &:hover {
-        color: $red
+        color: $peach;
+        text-decoration: underline;
       }
     }
   }
