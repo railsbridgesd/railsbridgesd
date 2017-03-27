@@ -8,12 +8,12 @@
   .form-group
     %label{for: "interestType"} Get involved!
     %select.form-control#interestType
-      %option{class: "prompt"} Select your interest type so we can better help you
-      %option{value: 'Student'} Student
-      %option{value: 'Volunteer'} Volunteer
-      %option{value: 'Sponsor'} Sponsor
-      %option{value: 'Organizer'} Organizer
+      %option{class: "prompt"} How would you like to be involved?
+      %option{value: 'Student'} Student - I'm interested attending RailsBridge!
+      %option{value: 'Volunteer'} Volunteer - I'm interested in teaching or TAing at RailsBridge
+      %option{value: 'Sponsor'} Sponsor - I'm interested in donating or hosting the next RailsBridge workshop
+      %option{value: 'Organizer'} Organizer - I'm interested in helping plan the next RailsBridge workshop
   .form-group
     %label{for: "inputMessage"} Message
-    %input.form-control{type: "text", id: "inputMessage", placeholder: "Include a message (optional)"}
+    %textarea.form-control{type: "text", id: "inputMessage", placeholder: "Enter message", rows: 4}
   %button.btn.btn-primary{type: "submit"} Submit
