@@ -11,15 +11,15 @@ h3 {
   }
 }
 
-.intro-content {
-  h2 {
-    text-align: center;
-    color: transparentize($white,0.5);
-    background-color: transparentize($peach,0.2);
-    display: inline-block;
-    margin: 10px 0px;
-  }
-}
+// .intro-content {
+//   h2 {
+//     text-align: center;
+//     color: transparentize($white,0.5);
+//     background-color: transparentize($peach,0.2);
+//     // display: inline-block;
+//     margin: 10px 0px;
+//   }
+// }
 
 .peach-wrap {
   h2 {
@@ -33,22 +33,18 @@ p {
 
 .navbar-default {
   .navbar-nav {
-    li {
-      a{
-        color: $white;
-        &:hover {
-          color: $peach;
-        }
+    li a{
+      color: $white;
+      &:hover {
+        color: $peach;
       }
     }
   }
   &.scrolled {
-    li {
-      a {
-        color: $peach;
-        &:hover {
-          color: $red
-        }
+    li a {
+      color: $peach;
+      &:hover {
+        color: $red
       }
     }
   }
