@@ -17,6 +17,9 @@ body {
     background-size: 18%;
     padding-left: 50px;
     margin-left: 0px !important;
+    &:hover {
+      color: #fff;
+    }
   }
   &.scrolled {
     background-color: #fff;
@@ -28,16 +31,34 @@ body {
       color: $peach;
     }
   }
+  &.navbar-default {
+    .navbar-nav {
+      li a{
+        color: $white;
+        &:hover {
+          color: $white;
+          text-decoration: underline;
+        }
+      }
+    }
+    &.scrolled {
+      li a {
+        color: $peach;
+        &:hover {
+          color: $peach;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
 }
 
-.container {
+section {
   margin-top: 30px;
   margin-bottom: 30px;
-}
-
-.peach-wrap {
-  background-color: $peach;
-  padding: 50px 70px;
+  &.peach {
+    background-color: $peach;
+  }
 }
 
 #intro {
@@ -66,17 +87,32 @@ body {
   }
 }
 
-.schedule-block {
-  background-color: rgba(255, 255, 255, .1);
-  border-radius: .2em;
-  margin: 20px;
-  padding: 5px 25px;
+#schedule {
+  .schedule-block {
+    background-color: rgba(255, 255, 255, .1);
+    border-radius: .2em;
+    margin: 12px 20px 30px 20px;
+    padding: 5px 25px;
+  }
 }
 
 .footer {
+  padding-bottom: 24px;
+  &.peach {
+    background-color: $peach;
+  }
+  i {
+    color: white;
+    color: transparentize($white,0.5);
+    font-size: 35px;
+    padding: 5px;
+  }
   .contact-placeholder {
     height: 290px;
     background-color: rgba(255, 255, 255, .1);
+  }
+  #social_icons {
+    margin-top: 24px;
   }
   iframe {
     max-width: 500px !important;

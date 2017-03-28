@@ -5,6 +5,15 @@ h1, h2 {
   color: $peach;
 }
 
+.peach {
+  h1 {
+    color: #fff;
+  }
+  h2 {
+    color: transparentize($white,0.5);
+  }
+}
+
 h1 {
   font-size: 36px;
 }
@@ -20,54 +29,13 @@ h3 {
   }
 }
 
-#schedule {
-  h1 {
-    color: #fff;
-  }
-}
-
-#faq h2 {
-  color: #333;
-  font-size: 18px;
-}
-
-.peach-wrap {
-  h2 {
-    color: transparentize($white,0.5);
-  }
-}
-
 p {
   margin: 18px 0;
 }
 
-.navbar-default {
-  .navbar-nav {
-    li a{
-      color: $white;
-      &:hover {
-        color: $white;
-        text-decoration: underline;
-      }
-    }
-  }
-  &.scrolled {
-    li a {
-      color: $peach;
-      &:hover {
-        color: $peach;
-        text-decoration: underline;
-      }
-    }
-  }
-}
+// EXCEPTIONS
 
-
-.footer {
-  i {
-    color: white;
-    color: transparentize($white,0.5);
-    font-size: 35px;
-    padding: 5px;
-  }
+#faq h2 {
+  color: #333;
+  font-size: 18px;
 }

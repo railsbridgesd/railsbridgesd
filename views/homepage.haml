@@ -3,9 +3,9 @@
   = haml :head
 
   %body
-    = haml :navigation
+    = haml :navbar
 
-    #intro.container-fluid
+    %section#intro.container-fluid
       .intro-content.text-center
         %h1 RailsBridge San Diego
 
@@ -39,8 +39,8 @@
         %h2.strong Quis nostrud exercitation ullamco laboris nisi ut?
         %p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
-    %section#schedule
-      .container-fluid.peach-wrap
+    %section.peach#schedule
+      .container
         .row
           .col-md-12
             %h1 Schedule
@@ -68,8 +68,7 @@
               %p
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
-
-    %section#voluntee
+    %section#volunteer
       .container
       
         %h1 Volunteer
