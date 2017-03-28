@@ -107,6 +107,25 @@
 
         %p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-        %p= link_to "Learn More!", "http://docs.railsbridge.org/docs/", class: "btn btn-primary"
+        %p= link_to "Learn More!", "http://docs.railsbridge.org/docs/", class: "btn btn-primary", target: "_blank"
+
+    %section#conduct
+      .container
+        %h1 Code of Conduct
+
+        %p We seek to create a community of software developers that are reflective of the diversity in the general population. To that end, we are dedicated to creating welcoming and friendly learning environments.
+        
+        %p All participants agree to the following:
+        
+        %ul
+          %li Everyone has something to contribute. Everyone deserves access to materials and community that will help them learn. As long as an individual can be respectful and not disruptive to other participants, they deserve to participate.
+          %li If there is limited space and resources, anyone is welcome to replicate an event, such that more opportunities may be available. All curricula and organizing materials are open source and free. Provided that the organizer and event conform to project guidelines, we will help.
+          %li
+            A harassment-free experience for everyone is essential. See our
+            #{link_to "anti-harassment policy", "http://bridgefoundry.org/code-of-conduct/anti-harrassment-policy.html", target: "_blank"}.
+
+        %p Furthermore, workshops and associated “after party” must be safe environments focused on learning.
+              
+        %p= link_to "Read More", "http://bridgefoundry.org/code-of-conduct/", class: "btn btn-primary", target: "_blank"
 
     = haml :footer
