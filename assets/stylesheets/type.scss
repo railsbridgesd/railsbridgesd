@@ -3,6 +3,7 @@
 
 h1, h2 {
   color: $peach;
+  font-family: $roboto;
 }
 
 .peach {
@@ -23,6 +24,7 @@ h2 {
 }
 
 h3 {
+  font-family: $roboto;
   font-size: 18px;
   &.sample {
     margin-top: 60px;
@@ -30,7 +32,21 @@ h3 {
 }
 
 p {
+  font-family: $lato;
+  font-weight: 300;
   margin: 18px 0;
+  font-size: 18px;
+}
+
+li {
+  font-family: $lato;
+  font-weight: 300;
+  font-size: 18px;
+}
+
+a {
+  font-family: $roboto;
+  font-size: 16px;
 }
 
 // EXCEPTIONS
