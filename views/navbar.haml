@@ -6,21 +6,15 @@
         %span.icon-bar
         %span.icon-bar
         %span.icon-bar
-      %a.navbar-brand{:href => "#intro"} RailsBridge San Diego
+      %a.navbar-brand{:href => "#header"} RailsBridge San Diego
 
     #hamburger.collapse.navbar-collapse
       %ul.nav.navbar-nav.navbar-right.pull-right
-        %li
-          %a{:href => "#about"} About
-        %li
-          %a{:href => "#faq"} FAQ
-        %li
-          %a{:href => "#schedule"} Schedule
-        %li
-          %a{:href => "#volunteer"} Volunteer
-        %li
-          %a{:href => "#resources"} Resources
-        %li
-          %a{:href => "#curriculum"} Curriculum
-        %li
-          %a{:href => "#conduct"} Code of Conduct
+        %li= link_to "Intro", "#intro"
+        %li= link_to "Schedule", "#schedule"
+        %li= link_to "Volunteer", "#volunteer"
+        %li= link_to "Resources", "#resources"
+        %li= link_to "Curriculum", "#curriculum"
+        %li= link_to "Code of Conduct", "#conduct"
+        %li= link_to "FAQ", "#faq"
+        %li= link_to "About", "#about"

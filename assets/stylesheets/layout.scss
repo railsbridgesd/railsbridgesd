@@ -59,25 +59,20 @@ section {
   }
 }
 
-#intro {
-  background-image: url("/assets/intro.jpg");
-  background-position: 50% 50%;
+#header {
+  background-image: url("/assets/header.jpg");
+  background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 580px;
-  .intro-content {
-    display: block;
-    margin: 0 auto;
-    padding-top: 160px;
-    width: 45%;
-    h2 {
-      background-color: rgba(179, 40, 45, 0.6);
-      color: $white;
-      display: inline;
-      line-height: 1.3em;
-      span {
-        padding: .3em;
-      }
+  height: 550px;
+}
+
+#intro {
+  h2 {
+    color: $purple;
+    line-height: 1.3em;
+    span {
+      display: block;
     }
   }
   .btn-primary {
