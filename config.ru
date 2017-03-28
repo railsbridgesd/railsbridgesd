@@ -1,5 +1,6 @@
 # GEMS
 require 'rubygems'
+require 'pony'
 require 'sinatra'
 require 'haml'
 require 'sass'
