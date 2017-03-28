@@ -18,19 +18,6 @@
 
         %p= link_to "Sign Up for RailsBridge San Diego", "https://www.bridgetroll.org/events/342", class: "btn btn-primary"
 
-    %section#sponsors
-      .container.text-center
-        .row
-          .col-md-12
-            %h1 Our Sponsors
-        .row
-          .col-md-4.col-xs-4
-            %p= link_to image_tag("/assets/sponsors/amazon.png", class: "img-responsive"), "https://www.amazon.com", target: "_blank"
-          .col-md-4.col-xs-4
-            %p= link_to image_tag("/assets/sponsors/learn.png", class: "img-responsive"), "https://www.learnacademy.org", target: "_blank"
-          .col-md-4.col-xs-4
-            %p= link_to image_tag("/assets/sponsors/procore.png", class: "img-responsive"), "https://www.procore.com", target: "_blank"
-
     %section.peach#schedule
       .container
         .row
@@ -69,6 +56,65 @@
               %p
                 We'll work until about noon, when we'll break for lunch. Lunch will be provided. Childcare is also available at no cost! After lunch we'll break back into small groups to finish up the rest of the curriculum. Groups that finish early may work on extra credit challenges. After the workshop wraps up, we'll head over to a local bar for the after party.
 
+    %section#sponsors
+      .container
+        .row
+          .col-md-12
+            %h1 Sponsors
+        .row
+          .col-md-12.text-center
+            %hr
+            %h2 Event Sponsors
+        .row
+          .col-md-12.text-center
+            %h3 Diamond Level
+        .row
+          .col-md-3
+          .col-md-6
+            %p= link_to image_tag("/assets/sponsors/amazon.png", class: "img-responsive amazon"), "https://www.amazon.jobs/en/locations/sandiego?base_query=&loc_query=&job_count=10&result_limit=10&sort=relevant&location%5B%5D=sandiego&cache", target: "_blank"
+          .col-md-3
+        .row
+          .col-md-12.text-center
+            %h3 Silver Level
+        .row
+          .col-md-2
+          .col-md-4
+            %p= link_to image_tag("/assets/sponsors/appfolio.png", class: "img-responsive appfolio"), "https://www.appfolio.com", target: "_blank"
+          .col-md-4
+            %p= link_to image_tag("/assets/sponsors/planningcenter.png", class: "img-responsive planningcenter"), "https://planning.center", target: "_blank"
+          .col-md-2
+          
+      .container#annual_sponsors    
+        .row
+          .col-md-12.text-center
+            %hr
+            %h2 Annual Sponsors            
+        .row
+          .col-md-12.text-center
+            %h3 Platinum Level
+        .row
+          .col-md-2
+          .col-md-4
+            %p= link_to image_tag("/assets/sponsors/learn.png", class: "img-responsive learn"), "https://www.learnacademy.org", target: "_blank"
+          .col-md-4
+            %p= link_to image_tag("/assets/sponsors/procore.png", class: "img-responsive procore"), "https://www.procore.com", target: "_blank"
+          .col-md-2
+      
+      
+      .container#thanks
+        .row
+          .col-md-12.text-center
+            %hr
+            %h2 Special Thanks 
+        .row
+          .col-md-3
+          .col-md-6
+            %p= link_to image_tag("/assets/sponsors/sdruby.png", class: "img-responsive sdruby"), "https://www.meetup.com/sdruby/", target: "_blank"
+          .col-md-3
+        .row
+          .col-md-12
+            %hr
+          
     %section#volunteer
       .container
         %h1 Volunteer
