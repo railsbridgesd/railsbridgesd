@@ -42,15 +42,6 @@ p {
   font-size: 18px;
   font-weight: 300;
   margin: 18px 0;
-  a {
-    color: $red;
-    font-family: $lato;
-    font-weight: 300;
-    font-size: 18px;
-    &:hover, &:focus {
-      color: $red;
-    }
-  }
 }
 
 // Forms
