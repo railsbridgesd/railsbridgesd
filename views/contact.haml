@@ -1,10 +1,10 @@
 %form{:action => "/contact", :method => "post"}
   .form-group
     %label{for: "name"} Name
-    %input.form-control{type: "text", name: "name", id: "name", placeholder: "Enter name"}
+    %input.form-control{type: "text", name: "name", id: "name"}
   .form-group
     %label{for: "email"} Email
-    %input.form-control{type: "email", name: "inputEmail", id: "email", placeholder: "Enter email"}
+    %input.form-control{type: "email", name: "inputEmail", id: "email"}
   .form-group
     %label{for: "interest"} Get involved!
     %select.form-control#interest{name: "interest"}
@@ -15,5 +15,5 @@
       %option{value: 'Organizer'} Organizer - I'm interested in helping plan the next RailsBridge workshop
   .form-group
     %label{for: "message"} Message
-    %textarea.form-control{type: "text", name: "message", id: "message", placeholder: "Enter message", rows: 4}
+    %textarea.form-control{type: "text", name: "message", id: "message", rows: 4}
   %button.btn.btn-primary{type: "submit"} Submit
