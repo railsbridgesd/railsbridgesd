@@ -3,9 +3,9 @@
   = haml :head
 
   %body
-    = haml :navigation
+    = haml :navbar
 
-    #content
+    #content{:style => "margin: 60px 0;"}
     
       .container
       
@@ -49,5 +49,3 @@
         
         %p
           = image_tag("assets/railsbridge.jpg", :size => "500x300")
-
-    = haml :footer
