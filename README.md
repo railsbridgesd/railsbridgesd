@@ -11,7 +11,10 @@ This is the website for http://www.railsbridgesd.org.
 ### Configure the app and bundle install
 1. Switch to Ruby 2.4.0 with the Ruby version manager of your choice (this
 should happen automatically from the `.ruby-version` file)
-2. `bundle install`
+2. Create an environment config file: `cp .env.sample .env`
+3. Update `.env` with credentials for:
+   - Gmail
+4. `bundle install`
 
 ### Launch the app
 1. Run `bundle exec shotgun config.ru -p 3000`

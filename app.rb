@@ -47,21 +47,49 @@ end
 class RailsBridgeSanDiego < Sinatra::Base
 
   # CONFIG
-
-  # Initialize sprockets
-  set :environment, Sprockets::Environment.new
-
-  # Set asset paths
-  environment.append_path "assets/images"
-  environment.append_path "assets/javascripts"
-  environment.append_path "assets/stylesheets"
-
-  # Load assets
-  get "/assets/*" do
-    env["PATH_INFO"].sub!("/assets", "")
-    settings.environment.call(env)
+  
+  # Configure for development environment
+  configure :development do
+    
+    # Load local ENV variables
+    require 'dotenv'
+    Dotenv.load
+    
   end
+  
+  # Configure for all environments
+  configure do
+    
+    # Initialize sprockets
+    set :environment, Sprockets::Environment.new
 
+    # Set asset paths
+    environment.append_path "assets/images"
+    environment.append_path "assets/javascripts"
+    environment.append_path "assets/stylesheets"
+
+    # Load assets
+    get "/assets/*" do
+      env["PATH_INFO"].sub!("/assets", "")
+      settings.environment.call(env)
+    end
+    
+    # Configure email settings
+    Pony.options = {
+      :via => :smtp,
+      :via_options => {
+        :address              => 'smtp.gmail.com',
+        :port                 => '587',
+        :enable_starttls_auto => true,
+        :user_name            => ENV["GMAIL_USERNAME"],
+        :password             => ENV["GMAIL_PASSWORD"],
+        :authentication       => :login,
+        :domain               => "railsbridgesd.org"
+      }
+    }
+    
+  end
+  
   # ROUTES
 
   # Homepage
@@ -76,7 +104,6 @@ class RailsBridgeSanDiego < Sinatra::Base
 
   # Contact form
   post '/contact' do
-    configure_pony
     name = params[:name]
     sender_email = params[:inputEmail]
     interest_type = params[:interest]
@@ -91,20 +118,5 @@ class RailsBridgeSanDiego < Sinatra::Base
 
     redirect '/'
   end
-
-  def configure_pony
-    Pony.options = {
-      :via => :smtp,
-      :via_options => {
-        :address              => 'smtp.gmail.com',
-        :port                 => '587',
-        :enable_starttls_auto => true,
-        :user_name            => 'railsbridgesd',
-        :password             => '[PASSWORD]', #update with railsbridgesd gmail
-        :authentication       => :login,
-        :domain               => "localhost.localdomain" #change to heroku once deployed (I think)?
-      }
-    }
-  end
-
+  
 end

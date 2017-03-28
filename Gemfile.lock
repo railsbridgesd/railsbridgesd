@@ -2,6 +2,7 @@ GEM
   remote: https://rubygems.org/
   specs:
     concurrent-ruby (1.0.5)
+    dotenv (2.2.0)
     execjs (2.7.0)
     haml (4.0.7)
       tilt
@@ -34,6 +35,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  dotenv
   haml
   pony
   rack-rewrite
