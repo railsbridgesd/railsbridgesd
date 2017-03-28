@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 ruby '2.4.0'
 
 gem 'haml'
+gem 'pony'
 gem 'sass'
 gem 'sinatra'
 gem 'shotgun'
