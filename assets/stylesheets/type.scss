@@ -1,28 +1,14 @@
 
 // TYPE
-a {
-  font-family: $roboto;
-  font-size: 16px;
-}
 
-.form-control {
-  font-family: $lato;
-  font-weight: 300;
-  font-size: 15px;
-}
+// Variables
+$lato: 'Lato', sans-serif;
+$roboto: 'Roboto Slab', serif;
 
+// Headlines
 h1, h2 {
   color: $peach;
   font-family: $roboto;
-}
-
-.peach {
-  h1 {
-    color: #fff;
-  }
-  h2 {
-    color: transparentize($white,0.5);
-  }
 }
 
 h1 {
@@ -41,23 +27,48 @@ h3 {
   }
 }
 
+.peach {
+  h1 {
+    color: #fff;
+  }
+  h2 {
+    color: transparentize($white,0.5);
+  }
+}
+
+// Paragraphs
+p {
+  font-family: $lato;
+  font-size: 18px;
+  font-weight: 300;
+  margin: 18px 0;
+}
+
+// Forms
+.form-control {
+  font-family: $lato;
+  font-size: 15px;
+  font-weight: 300;
+}
+
 label {
   font-family: $roboto;
   font-size: 15px;
 }
 
-li {
-  font-family: $lato;
-  font-weight: 300;
-  font-size: 18px;
+// Links
+a {
+  font-family: $roboto;
+  font-size: 16px;
 }
 
-p {
+// Lists
+li {
   font-family: $lato;
-  font-weight: 300;
   font-size: 18px;
-  margin: 18px 0;
+  font-weight: 300;
 }
+
 
 // EXCEPTIONS
 

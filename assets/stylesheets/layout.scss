@@ -8,13 +8,12 @@ body {
   background-color: $peach;
   border-bottom: none;
   transition: all 0.5s ease-out;
-  // background-color: rgba(179, 40, 45, 0.6);
   .navbar-brand {
-    color: #fff;
-    font-weight: bold;
     background: url("/assets/brand_white.png") center left;
     background-repeat: no-repeat;
     background-size: 18%;
+    color: #fff;
+    font-weight: bold;
     padding-left: 50px;
     margin-left: 0px !important;
     &:hover {
@@ -54,8 +53,7 @@ body {
 }
 
 section {
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin: 30px 0;
   &.peach {
     background-color: $peach;
   }
@@ -63,23 +61,20 @@ section {
 
 #intro {
   background-image: url("/assets/intro.jpg");
-  height: 580px;
-  background-size: cover;
-  background-repeat: no-repeat;
   background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 580px;
   .intro-content {
     display: block;
     margin: 0 auto;
     padding-top: 160px;
     width: 45%;
     h2 {
-      // background-color: transparentize($peach,0.2);
-      // color:            transparentize($white,0.5);
       background-color: rgba(179, 40, 45, 0.6);
-      color:            $white;
+      color: $white;
       display: inline;
       line-height: 1.3em;
-
       span {
         padding: .3em;
       }
@@ -108,14 +103,9 @@ section {
     background-color: $peach;
   }
   i {
-    color: white;
     color: transparentize($white,0.5);
-    font-size: 35px;
+    font-size: 32px;
     padding: 5px;
-  }
-  .contact-placeholder {
-    height: 290px;
-    background-color: rgba(255, 255, 255, .1);
   }
   #social_icons {
     margin-top: 24px;
