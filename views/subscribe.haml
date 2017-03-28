@@ -1,0 +1,7 @@
+%h3 Stay up to date on all of our workshops!
+
+%form.subscribe{:action => "/subscribe", :method => "post"}
+  .form-inline
+    .form-group
+      %input.form-control{type: "email", name: "subscribeEmail", id: "email", placeholder: "Email"}
+    %button.btn.btn-primary{type: "submit"} Subscribe
