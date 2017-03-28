@@ -43,13 +43,13 @@ p {
   font-weight: 300;
   margin: 18px 0;
   a {
-    color: #41e0d9;
+    color: $red;
     font-family: $lato;
     font-weight: 300;
     font-size: 18px;
     margin: 18px 0;
     &:hover, &:focus {
-      color: #41e0d9;
+      color: $red;
     }
   }
 }
