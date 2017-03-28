@@ -60,6 +60,10 @@ label {
 a {
   font-family: $roboto;
   font-size: 16px;
+  color: $red;
+  &:hover {
+    color: $red;
+  }
 }
 
 // Lists
@@ -67,6 +71,12 @@ li {
   font-family: $lato;
   font-size: 18px;
   font-weight: 300;
+  a {
+    color: $red;
+    &:hover {
+      color: $red;
+    }
+  }
 }
 
 
