@@ -17,12 +17,15 @@ def image_tag(image, options = {})
   end
 
   # Set height and width
-  options[:width] = options[:size].split("x")[0]
-  options[:height] = options[:size].split("x")[1]
+  if options[:size]
+    options[:width] = options[:size].split("x")[0]
+    options[:height] = options[:size].split("x")[1]
+    options.delete(:size)
+  end
 
   # Set fallback alt text using image name
   # (only use this if image has no :alt text)
-  if options[:alt] == nil
+  unless options[:alt]
     options[:alt] = File.basename(image_name,File.extname(image_name))
   end
 
@@ -85,7 +88,7 @@ class RailsBridgeSanDiego < Sinatra::Base
       subject: "Message from #{name} (#{interest_type})",
       body: "#{message}"
     )
-    
+
     redirect '/'
   end
 
