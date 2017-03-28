@@ -119,4 +119,10 @@ class RailsBridgeSanDiego < Sinatra::Base
     redirect '/'
   end
 
+  # Mailing list
+  post '/subscribe' do
+    subscriber_email = params[:subscriberEmail]
+    # Patrick to add mailchimp stuff
+  end
+
 end
