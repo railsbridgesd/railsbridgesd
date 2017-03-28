@@ -85,6 +85,14 @@ section {
       }
     }
   }
+  .btn-primary {
+    border: none !important;
+    &:hover, &:active, &:focus, &.active {
+      border: none !important;
+    }
+  }
+  
+  
 }
 
 #schedule {

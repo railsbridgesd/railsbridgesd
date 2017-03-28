@@ -3,69 +3,80 @@
 
 .btn-primary {
   background: $red;
+  border: 1px solid $red;
   color: $white;
-  border: none;
   transition: background 0.2s;
-  &:hover {
-    background: $white;
-    color: $peach;
+  &:hover, &:active, &:focus, &.active {
+    background: $white !important;
+    border: 1px solid $red !important;
+    box-shadow: none !important;
+    color: $red !important;
+    outline: 0 !important;
+    outline-offset: 0  !important;
   }
+}
+
+.peach .btn-primary {
+  border: none !important;
 }
 
 .btn-peach {
   background: $peach;
-  border: 1px solid $white;
-  color: $white;
-  &:hover {
+  border: 1px solid $peach;
+  &:hover, &:active, &:focus, &.active {
     background: $white;
-    border: 1px solid $white;
+    border: 1px solid $peach !important;
     color: $peach;
   }
 }
 
 .btn-red {
   background: $red;
-  color: $white;
-  &:hover {
-    background: $white;
-    color: $red;
+  border: 1px solid $red;
+  &:hover, &:active, &:focus, &.active {
+    background: $white !important;
+    border: 1px solid $red !important;
+    color: $red !important;
   }
 }
 
 .btn-purple {
   background: $purple;
-  color: $white;
-  &:hover {
-    background: $white;
-    color: $purple;
+  border: 1px solid $purple;
+  &:hover, &:active, &:focus, &.active {
+    background: $white !important;
+    border: 1px solid $purple !important;
+    color: $purple !important;
   }
 }
 
 .btn-green {
   background: $green;
-  color: $white;
-  &:hover {
-    background: $white;
-    color: $green;
+  border: 1px solid $green;
+  &:hover, &:active, &:focus, &.active {
+    background: $white !important;
+    border: 1px solid $green !important;
+    color: $green !important;
   }
 }
 
 .btn-gray {
   background: $gray;
-  color: $white;
-  &:hover {
-    background: $white;
-    color: $gray;
+  border: 1px solid $gray !important;
+  &:hover, &:active, &:focus, &.active {
+    background: $white !important;
+    border: 1px solid $gray !important;
+    color: $gray !important;
   }
 }
 
 .btn-white {
   background: $white;
-  border: 1px solid $white;
+  border: 1px solid $peach;
   color: $peach;
-  &:hover {
-    background: $peach;
-    border: 1px solid $white;
-    color: $white;
+  &:hover, &:active, &:focus, &.active {
+    background: $peach !important;
+    border: 1px solid $peach !important;
+    color: $white !important;
   }
 }
