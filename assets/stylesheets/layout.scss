@@ -83,6 +83,10 @@ section {
   }
 }
 
+.form-inline .form-control {
+  min-width: 300px;
+}
+
 #schedule {
   .schedule-block {
     background-color: rgba(255, 255, 255, .1);
