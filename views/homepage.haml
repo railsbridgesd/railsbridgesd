@@ -12,11 +12,24 @@
         %h1 RailsBridge San Diego
 
         %h2
-          RailsBridge is a free two-day workshop where you can 
+          RailsBridge is a free two-day workshop where you can
           %span
             learn how to build a web app using Ruby on Rails.
 
         %p= link_to "Sign Up for RailsBridge San Diego", "https://www.bridgetroll.org/events/342", class: "btn btn-primary"
+
+    %section#sponsors
+      .container.text-center
+        .row
+          .col-md-12
+            %h1 Our Sponsors
+        .row
+          .col-md-4.col-xs-4
+            %p= link_to image_tag("../assets/sponsor_logos/amazon_logo_CMYK-01.png", class: "img-responsive"), "https://www.amazon.com", target: "_blank"
+          .col-md-4.col-xs-4
+            %p= link_to image_tag("../assets/sponsor_logos/Learn_academy-Logo_Green-slogan.png", class: "img-responsive"), "https://www.learnacademy.org", target: "_blank"
+          .col-md-4.col-xs-4
+            %p= link_to image_tag("../assets/sponsor_logos/procore_logo_fc_k.png", class: "img-responsive"), "https://www.procore.com", target: "_blank"
 
     %section.peach#schedule
       .container
@@ -86,9 +99,9 @@
         %h1 Code of Conduct
 
         %p We seek to create a community of software developers that are reflective of the diversity in the general population. To that end, we are dedicated to creating welcoming and friendly learning environments.
-        
+
         %p All participants agree to the following:
-        
+
         %ul
           %li Everyone has something to contribute. Everyone deserves access to materials and community that will help them learn. As long as an individual can be respectful and not disruptive to other participants, they deserve to participate.
           %li If there is limited space and resources, anyone is welcome to replicate an event, such that more opportunities may be available. All curricula and organizing materials are open source and free. Provided that the organizer and event conform to project guidelines, we will help.
@@ -97,7 +110,7 @@
             #{link_to "anti-harassment policy", "http://bridgefoundry.org/code-of-conduct/anti-harrassment-policy.html", target: "_blank"}.
 
         %p Furthermore, workshops and associated “after party” must be safe environments focused on learning.
-              
+
         %p= link_to "Read More", "http://bridgefoundry.org/code-of-conduct/", class: "btn btn-primary", target: "_blank"
 
     %section#faq
@@ -131,7 +144,7 @@
         %h2 How much does childcare cost?
 
         %p Nothing! RailsBridge hires a sitter on the house so that there’s nothing between you and your computer. Childcare is typically provided in a lounge or conference room near to your classroom. Just let the organizer know ahead of time so we can make arrangements.
-    
+
     %section#about
       .container
         %h1 About
@@ -141,5 +154,5 @@
         %p San Diego RailsBridge Workshop for Women is a day and a half FREE workshop that will take students through building a complete web application using Ruby on Rails. By the end of the workshop, you'll have an application on the internet that connects to a database and reads and writes information. We'll meet up Friday night to install all of the software you need, and then spend Saturday, the workshop day learning and writing code.
 
         %p RailsBridge workshops focus on providing opportunities for under-represented populations in tech. This is an Outreach to Women Workshop. It is emphatically LGBTQQIP2SAA friendly. If you are not a member of an underrepresented group, you can attend as a student if you're the guest of someone who is a member of the workshop's target population. The workshop provides an opportunity for you to participate in outreach efforts and encourage someone to attend with you who might not otherwise come.
-                
+
     = haml :footer

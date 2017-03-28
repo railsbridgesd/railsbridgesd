@@ -47,19 +47,19 @@ end
 class RailsBridgeSanDiego < Sinatra::Base
 
   # CONFIG
-  
+
   # Configure for development environment
   configure :development do
-    
+
     # Load local ENV variables
     require 'dotenv'
     Dotenv.load
-    
+
   end
-  
+
   # Configure for all environments
   configure do
-    
+
     # Initialize sprockets
     set :environment, Sprockets::Environment.new
 
@@ -73,7 +73,7 @@ class RailsBridgeSanDiego < Sinatra::Base
       env["PATH_INFO"].sub!("/assets", "")
       settings.environment.call(env)
     end
-    
+
     # Configure email settings
     Pony.options = {
       :via => :smtp,
@@ -87,9 +87,9 @@ class RailsBridgeSanDiego < Sinatra::Base
         :domain               => "railsbridgesd.org"
       }
     }
-    
+
   end
-  
+
   # ROUTES
 
   # Homepage
@@ -118,5 +118,5 @@ class RailsBridgeSanDiego < Sinatra::Base
 
     redirect '/'
   end
-  
+
 end
