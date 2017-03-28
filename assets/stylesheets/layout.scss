@@ -106,6 +106,9 @@ section {
     color: transparentize($white,0.5);
     font-size: 32px;
     padding: 5px;
+    &:hover {
+      color: transparentize($white,0.2);
+    }
   }
   #social_icons {
     margin-top: 24px;
