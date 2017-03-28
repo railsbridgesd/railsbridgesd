@@ -1,5 +1,15 @@
 
 // TYPE
+a {
+  font-family: $roboto;
+  font-size: 16px;
+}
+
+.form-control {
+  font-family: $lato;
+  font-weight: 300;
+  font-size: 15px;
+}
 
 h1, h2 {
   color: $peach;
@@ -31,11 +41,9 @@ h3 {
   }
 }
 
-p {
-  font-family: $lato;
-  font-weight: 300;
-  margin: 18px 0;
-  font-size: 18px;
+label {
+  font-family: $roboto;
+  font-size: 15px;
 }
 
 li {
@@ -44,9 +52,11 @@ li {
   font-size: 18px;
 }
 
-a {
-  font-family: $roboto;
-  font-size: 16px;
+p {
+  font-family: $lato;
+  font-weight: 300;
+  font-size: 18px;
+  margin: 18px 0;
 }
 
 // EXCEPTIONS
