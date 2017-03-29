@@ -18,45 +18,16 @@
 
         %p= link_to "Sign Up for RailsBridge San Diego", "https://www.bridgetroll.org/events/342", class: "btn btn-primary"
 
-        = haml :subscribe
+
 
     %section.peach#schedule
       .container
         .row
           .col-md-12
             %h1 Schedule
-        .row
-          .col-md-6
-            .schedule-block
-              %h2 Installfest
-              %h3
-                %i.fa.fa-calendar-o
-                %span Friday, April 21, 2017
-              %h3
-                %i.fa.fa-clock-o
-                %span 6:00 pm - 9:00 pm
-              %h3
-                %i.fa.fa-map-marker
-                %span <a href="https://goo.gl/maps/UrXeuyQPGM92" target="_blank">AppFolio</a>
-              %p
-                Our evening Installfest will match you up with a volunteer who will help make sure your computer is ready for you to build a Rails application. Make the most of Installfest by working through the <a href="http://installfest.railsbridge.org/installfest/installfest" target="_blank">Installfest instructions</a> in advance. It's great if you can get your computer ready on your own; you'll have more time to get acquainted with students and coaches at Installfest. If you run into difficulties getting your computer ready at home, bring the problems to Installfest and we'll help you get everything working.
-          .col-md-6
-            .schedule-block
-              %h2 Workshop
-              %h3
-                %i.fa.fa-calendar-o
-                %span Saturday, April 22, 2017
-              %h3
-                %i.fa.fa-clock-o
-                %span 9:30 am - 4:30 pm
-              %h3
-                %i.fa.fa-map-marker
-                %span <a href="https://goo.gl/maps/UrXeuyQPGM92" target="_blank">AppFolio</a>
-              %p
-                For the full day workshop we'll break into small group based on experience level and build a web app using the <a href="http://docs.railsbridge.org/intro-to-rails/" target="_blank">RailsBridge currciculum</a>!
 
-              %p
-                We'll work until about noon, when we'll break for lunch. Lunch will be provided. Childcare is also available at no cost! After lunch we'll break back into small groups to finish up the rest of the curriculum. Groups that finish early may work on extra credit challenges. After the workshop wraps up, we'll head over to a local bar for the after party.
+        = haml :schedule
+        = haml :subscribe
 
     %section#sponsors
       .container
