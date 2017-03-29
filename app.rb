@@ -1,3 +1,4 @@
+WORKSHOP_DATE = Date.new(2017,04,22)
 
 # VIEWS
 set :haml, :format => :html5, :attr_wrapper => '"'
@@ -41,6 +42,14 @@ def link_to(text, url, options = {})
     attributes = ""
   end
   "<a href=#{url}" + attributes + ">#{text}</a>"
+end
+
+def active_workshop
+  if WORKSHOP_DATE > Date.today
+    return true
+  else
+    return false
+  end
 end
 
 # APP
