@@ -33,20 +33,37 @@ $(document).ready(function(){
     var interest = $('[name="interest"]').find(':selected').val();
     var message = $('[name="message"]').val();
 
-    var request = $.ajax({
-      url: '/contact',
-      method: 'POST',
-      data: {
-        name: name,
-        inputEmail: inputEmail,
-        interest: interest,
-        message: message
-      }
-    });
+    if (!validateEmail(inputEmail)) {
+      alert("Please enter valid email");
+    } else {
+      var request = $.ajax({
+        url: '/contact',
+        method: 'POST',
+        data: {
+          name: name,
+          inputEmail: inputEmail,
+          interest: interest,
+          message: message
+        }
+      });
 
-    request.done(function(){
-      alert('Success!');
-    });
+      request.done(function(){
+        alert('Success!');
+      });
+    }
   });
 
 });
+
+/* Shallow email validation that checks for presence and that only one @
+** Test Cases:
+** validateEmail("sadfds@yahoo.com") => true
+** validateEmail("sdfdssadf") => false
+** validateEmail("safsd@sdfasd@.com") => false
+** validateEmail("") => false
+*/
+function validateEmail(email) {
+  var re = /^[^@]+@[^@]+$/;
+
+  return (re.test(email)) ? true : false;
+}
