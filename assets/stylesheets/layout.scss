@@ -83,9 +83,13 @@ section {
   }
 }
 
-.form-inline .form-control {
-  min-width: 300px;
+.subscribe {
+  margin-bottom: 20px;
+  .form-inline .form-control {
+    min-width: 300px;
+  }
 }
+
 
 #schedule {
   .schedule-block {

@@ -1,7 +1,13 @@
-%h3 Stay up to date on all of our workshops!
-
-%form.subscribe{:action => "/subscribe", :method => "post"}
-  .form-inline
-    .form-group
-      %input.form-control{type: "email", name: "subscriberEmail", id: "email", placeholder: "Email"}
-    %button.btn.btn-primary{type: "submit"} Subscribe
+.row
+  .col-md-12
+    .schedule-block
+      %h2 Upcoming Workshops
+      %p We haven't announced the dates for the next RailsBridge workshop in San Diego, but you can sign up for our mailing list below to get notified about the next event.
+      %form.subscribe{:action => "/subscribe", :method => "post"}
+        %h3
+          %i.fa.fa-envelope-o
+          %span Email
+        .form-inline
+          .form-group
+            %input.form-control{type: "email", name: "subscriberEmail", id: "email"}
+          %button.btn.btn-primary{type: "submit"} Subscribe
