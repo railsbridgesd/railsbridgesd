@@ -25,5 +25,28 @@ $(document).ready(function(){
       return false;
     }
   });
-  
+
+  // Post to email
+  $('button[type="submit"]').on("click", function() {
+    var name = $('[name="name"]').val();
+    var inputEmail = $('[name="inputEmail"]').val();
+    var interest = $('[name="interest"]').find(':selected').text();
+    var message = $('[name="message"]').val();
+
+    var request = $.ajax({
+      url: '/contact',
+      method: 'POST',
+      data: {
+        name: name,
+        inputEmail: inputEmail,
+        interest: interest,
+        message: message
+      }
+    });
+
+    request.done(function(){
+      alert('Success!');
+    });
+  });
+
 });
