@@ -1,4 +1,3 @@
-WORKSHOP_DATE = Date.new(2017,04,22)
 
 # VIEWS
 set :haml, :format => :html5, :attr_wrapper => '"'
