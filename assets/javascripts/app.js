@@ -30,7 +30,7 @@ $(document).ready(function(){
   $('button[type="submit"]').on("click", function() {
     var name = $('[name="name"]').val();
     var inputEmail = $('[name="inputEmail"]').val();
-    var interest = $('[name="interest"]').find(':selected').text();
+    var interest = $('[name="interest"]').find(':selected').val();
     var message = $('[name="message"]').val();
 
     var request = $.ajax({
