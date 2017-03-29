@@ -56,6 +56,9 @@ class RailsBridgeSanDiego < Sinatra::Base
     require 'dotenv'
     Dotenv.load
 
+    # Show exceptions
+    set :show_exceptions, true
+
   end
 
   # Configure for all environments
