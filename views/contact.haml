@@ -1,19 +1,29 @@
-%form{:action => "/contact", :method => "post"}
-  .form-group
-    %label{for: "name"} Name
-    %input.form-control{type: "text", name: "name", id: "name"}
-  .form-group
-    %label{for: "email"} Email
-    %input.form-control{type: "email", name: "inputEmail", id: "email"}
-  .form-group
-    %label{for: "interest"} Get involved!
-    %select.form-control#interest{name: "interest"}
-      %option{class: "prompt"} How would you like to be involved?
-      %option{value: 'Student'} Student - I'm interested attending RailsBridge!
-      %option{value: 'Volunteer'} Volunteer - I'm interested in teaching or TAing at RailsBridge
-      %option{value: 'Sponsor'} Sponsor - I'm interested in donating or hosting the next RailsBridge workshop
-      %option{value: 'Organizer'} Organizer - I'm interested in helping plan the next RailsBridge workshop
-  .form-group
-    %label{for: "message"} Message
-    %textarea.form-control{type: "text", name: "message", id: "message", rows: 3}
+.form-group
+  %label Name
+  %input.form-control{type: "text", name: "name", id: "name"}
+
+.form-group
+  %label Email
+  %input.form-control{type: "email", name: "inputEmail", id: "email"}
+
+.form-group
+  %label Get involved!
+  %select.form-control#interest{name: "interest"}
+    %option{class: "prompt", hidden: "hidden", value: ""} How would you like to be involved?
+    %option{value: 'Student'} Student - I'm interested attending RailsBridge!
+    %option{value: 'Volunteer'} Volunteer - I'm interested in teaching or TAing at RailsBridge
+    %option{value: 'Sponsor'} Sponsor - I'm interested in donating or hosting the next RailsBridge workshop
+    %option{value: 'Organizer'} Organizer - I'm interested in helping plan the next RailsBridge workshop
+
+.form-group
+  %label Message
+  %textarea.form-control{type: "text", name: "message", id: "message", rows: 3}
+
+.messages
   %button.btn.btn-primary{type: "submit"} Send Email
+  %span.loading
+    %img{src: '/assets/icons/loading.svg'}
+  %span.message-success Sent!
+  %span.message-fail Something went wrong
+  %span.message-email Please input valid email
+  %span.message-interest Please choose how you would like to get involved

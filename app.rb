@@ -114,13 +114,11 @@ class RailsBridgeSanDiego < Sinatra::Base
     message = params[:message]
 
     Pony.mail(
-      to: 'railsbridgesd@gmail.com',
+      to: 'sslampa@gmail.com',
       reply_to: "#{sender_email}",
       subject: "Message from #{name} (#{interest_type})",
       body: "#{message}"
     )
-
-    redirect '/'
   end
 
   # Mailing list signup form

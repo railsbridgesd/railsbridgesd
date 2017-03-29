@@ -25,5 +25,55 @@ $(document).ready(function(){
       return false;
     }
   });
-  
+
+  // Post to email
+  $('button[type="submit"]').on("click", function() {
+    var name = $('[name="name"]').val();
+    var inputEmail = $('[name="inputEmail"]').val();
+    var interest = $('[name="interest"]').find(':selected').val();
+    var message = $('[name="message"]').val();
+    $('.messages > span').hide();
+
+    if (!interest) {
+      $('.message-interest').show();
+    } else if (!validateEmail(inputEmail)) {
+      $('.message-email').show();
+    } else {
+      $.ajax({
+        url: '/contact',
+        method: 'POST',
+        data: {
+          name: name,
+          inputEmail: inputEmail,
+          interest: interest,
+          message: message
+        },
+        beforeSend: function() {
+          $('span.loading').show();
+        },
+        success: function() {
+          $('.messages > span').hide();
+          $('.message-success').show();
+        },
+        error: function() {
+          $('.messages > span').hide();
+          $('.message-fail').show();
+        }
+      });
+    }
+  });
+
 });
+
+/* Shallow email validation that checks for presence and that only one @
+** Test Cases:
+** validateEmail("sadfds@yahoo.com") => true
+** validateEmail("sdfdssadf") => false
+** validateEmail("safsd@sdfasd@.com") => false
+** validateEmail("") => false
+*/
+function validateEmail(email) {
+  var re = /^[^@]+@[^@]+$/;
+
+  return (re.test(email)) ? true : false;
+}
