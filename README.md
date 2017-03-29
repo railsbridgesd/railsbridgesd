@@ -13,7 +13,8 @@ This is the website for http://www.railsbridgesd.org.
 should happen automatically from the `.ruby-version` file)
 2. Create an environment config file: `cp .env.sample .env`
 3. Update `.env` with credentials for:
-   - Gmail
+   - Gmail account information (for sending email)
+   - Date for next RailsBridge event (example: `2017-04-21`)
 4. `bundle install`
 
 ### Launch the app

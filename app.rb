@@ -44,14 +44,6 @@ def link_to(text, url, options = {})
   "<a href=#{url}" + attributes + ">#{text}</a>"
 end
 
-def active_workshop
-  if WORKSHOP_DATE > Date.today
-    return true
-  else
-    return false
-  end
-end
-
 # APP
 class RailsBridgeSanDiego < Sinatra::Base
 
@@ -103,6 +95,7 @@ class RailsBridgeSanDiego < Sinatra::Base
 
   # Homepage
   get '/' do
+    @active_workshop = (Time.parse(ENV['NEXT_RAILSBRIDGE']) > (Time.now + 1 * 86400) ? true : false)
     haml :homepage
   end
 
