@@ -75,6 +75,10 @@ section {
       display: block;
     }
   }
+  b {
+    font-style: normal;
+    text-decoration: underline;
+  }
   .btn-primary {
     border: 1px solid $red !important;
     &:hover, &:active, &:focus, &.active {
@@ -114,6 +118,30 @@ section {
         &:hover {
           text-decoration: none;
         }
+      }
+    }
+    p {
+      span, strong {
+        color: transparentize($white,0.5);
+        font-family: $roboto;
+      }
+      strong {
+        display: block;
+      }
+    }
+    ul {
+      list-style: none;
+      padding-left: 12px;
+      margin: -18px 0 12px 0;
+      li {
+        color: transparentize($white,0.1);
+      }
+      li::before {
+        content: "•";
+        color: transparentize($white,0.5);
+        display: inline-block;
+        width: 1em;
+        margin-left: -12px;
       }
     }
   }

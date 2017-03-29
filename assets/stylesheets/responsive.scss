@@ -1,2 +1,11 @@
 
 // RESPONSIVE
+
+// Schedule event blocks should always have the same height
+@media (min-width: 992px) and (max-width: 1199px) {
+  #schedule {
+    .schedule-block {
+      height: 595px;
+    }
+  }
+}
