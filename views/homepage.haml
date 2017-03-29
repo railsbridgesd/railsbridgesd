@@ -15,10 +15,8 @@
           RailsBridge is a free two-day workshop where you can
           %span
             learn how to build a web app using Ruby on Rails.
-
-        %p= link_to "Sign Up for RailsBridge San Diego", "https://www.bridgetroll.org/events/342", class: "btn btn-primary"
-
-
+        -if active_workshop
+          %p= link_to "Sign Up for RailsBridge San Diego", "https://www.bridgetroll.org/events/342", class: "btn btn-primary"
 
     %section.peach#schedule
       .container
