@@ -123,10 +123,19 @@ class RailsBridgeSanDiego < Sinatra::Base
     redirect '/'
   end
 
-  # Mailing list
+  # Mailing list signup form
   post '/subscribe' do
-    subscriber_email = params[:subscriberEmail]
-    # Patrick to add mailchimp stuff
+    
+    # Get email and remove whitespace
+    email = params[:email].strip
+
+    # Connect to MailChimp
+    gibbon = Gibbon::Request.new(api_key: ENV["MAILCHIMP_KEY"])
+
+    # Add email to list
+    gibbon.lists(ENV["MAILCHIMP_LIST"]).members.create(body: {email_address: email, status: "subscribed"})
+
+    redirect '/'
   end
 
 end

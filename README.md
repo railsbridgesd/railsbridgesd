@@ -12,9 +12,12 @@ This is the website for http://www.railsbridgesd.org.
 1. Switch to Ruby 2.4.0 with the Ruby version manager of your choice (this
 should happen automatically from the `.ruby-version` file)
 2. Create an environment config file: `cp .env.sample .env`
-3. Update `.env` with credentials for:
-   - Gmail account information (for sending email)
-   - Date for next RailsBridge event (example: `2017-04-21`)
+3. Update `.env` variables:   
+   - GMAIL_USERNAME   - with your gmail username
+   - GMAIL_PASSWORD   - with your gmail password
+   - MAILCHIMP_KEY    - with your MailChimp API key
+   - MAILCHIMP_LIST   - with your MailChimp List ID
+   - NEXT_RAILSBRIDGE - with your next RailsBridge event date (2017-04-21)
 4. `bundle install`
 
 ### Launch the app

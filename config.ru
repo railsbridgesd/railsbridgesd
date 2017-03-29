@@ -1,11 +1,12 @@
 # GEMS
 require 'rubygems'
-require 'pony'
 require 'sinatra'
 require 'haml'
 require 'sass'
 require 'sprockets'
 require 'uglifier'
+require 'gibbon'
+require 'pony'
 require './app'
 
 run RailsBridgeSanDiego.new

@@ -25,7 +25,7 @@
         .row
           .col-md-12
             %h1 Schedule
-        - if @active_workshop
+        - if @active_workshop and params[:list] != "show"
           = haml :schedule
         - else
           = haml :subscribe
