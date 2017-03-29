@@ -114,7 +114,7 @@ class RailsBridgeSanDiego < Sinatra::Base
     message = params[:message]
 
     Pony.mail(
-      to: 'sslampa@gmail.com',
+      to: 'railsbridgesd@gmail.com',
       reply_to: "#{sender_email}",
       subject: "Message from #{name} (#{interest_type})",
       body: "#{message}"
