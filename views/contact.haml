@@ -9,7 +9,7 @@
 .form-group
   %label Get involved!
   %select.form-control#interest{name: "interest"}
-    %option{class: "prompt", selected: "selected", disabled: "disabled"} How would you like to be involved?
+    %option{class: "prompt", hidden: "hidden"} How would you like to be involved?
     %option{value: 'Student'} Student - I'm interested attending RailsBridge!
     %option{value: 'Volunteer'} Volunteer - I'm interested in teaching or TAing at RailsBridge
     %option{value: 'Sponsor'} Sponsor - I'm interested in donating or hosting the next RailsBridge workshop
@@ -19,7 +19,7 @@
   %label Message
   %textarea.form-control{type: "text", name: "message", id: "message", rows: 3}
 
-.form-group
+.messages
   %button.btn.btn-primary{type: "submit"} Send Email
   %span.loading
     %img{src: '/assets/icons/loading.svg'}

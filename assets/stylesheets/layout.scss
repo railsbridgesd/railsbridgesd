@@ -141,21 +141,16 @@ section {
   }
 }
 
-.form-group > span {
+.messages > span {
   display: none;
   margin: 0;
   padding: 6px 12px;
-}
-.message-success {
-  color: $green;
-}
-
-.message-fail {
-  color: $red;
-}
-
-.message-email {
-  color: $red;
+  &.message-success {
+    color: $green;
+  }
+  &.message-fail, &.message-email {
+    color: $red;
+  }
 }
 
 .footer {

@@ -32,7 +32,7 @@ $(document).ready(function(){
     var inputEmail = $('[name="inputEmail"]').val();
     var interest = $('[name="interest"]').find(':selected').val();
     var message = $('[name="message"]').val();
-    $('.form-group > span').hide();
+    $('.messages > span').hide();
 
     if (!validateEmail(inputEmail)) {
       $('.message-email').show();
@@ -50,11 +50,11 @@ $(document).ready(function(){
           $('span.loading').show();
         },
         success: function() {
-          $('.form-group > span').hide();
+          $('.messages > span').hide();
           $('.message-success').show();
         },
         error: function() {
-          $('.form-group > span').hide();
+          $('.messages > span').hide();
           $('.message-fail').show();
         }
       });
