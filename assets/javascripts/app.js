@@ -27,7 +27,9 @@ $(document).ready(function(){
   });
 
   // Post to email
-  $('button[type="submit"]').on("click", function() {
+  $('.footer button[type="submit"]').on("click", function(e) {
+    e.preventDefault();
+    
     var name = $('[name="name"]').val();
     var inputEmail = $('[name="inputEmail"]').val();
     var interest = $('[name="interest"]').find(':selected').val();
@@ -54,6 +56,7 @@ $(document).ready(function(){
         success: function() {
           $('.messages > span').hide();
           $('.message-success').show();
+          $(".footer form").get(0).reset();
         },
         error: function() {
           $('.messages > span').hide();
@@ -65,14 +68,18 @@ $(document).ready(function(){
 
 });
 
-/* Shallow email validation that checks for presence and that only one @
-** Test Cases:
-** validateEmail("sadfds@yahoo.com") => true
-** validateEmail("sdfdssadf") => false
-** validateEmail("safsd@sdfasd@.com") => false
-** validateEmail("") => false
-*/
+
+// FUNCTIONS
+
 function validateEmail(email) {
+  /* Shallow email validation that checks for presence and that only one @
+  ** Test Cases:
+  ** validateEmail("sadfds@yahoo.com") => true
+  ** validateEmail("sdfdssadf") => false
+  ** validateEmail("safsd@sdfasd@.com") => false
+  ** validateEmail("") => false
+  */
+  
   var re = /^[^@]+@[^@]+$/;
 
   return (re.test(email)) ? true : false;

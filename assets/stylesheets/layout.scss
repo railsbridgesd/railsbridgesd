@@ -180,18 +180,6 @@ section {
   }
 }
 
-.messages > span {
-  display: none;
-  margin: 0;
-  padding: 6px 12px;
-  &.message-success {
-    color: $green;
-  }
-  &.message-fail, &.message-email, &.message-interest {
-    color: $red;
-  }
-}
-
 .footer {
   padding-bottom: 24px;
   &.peach {

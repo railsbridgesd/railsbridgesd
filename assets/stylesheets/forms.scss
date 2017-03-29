@@ -84,3 +84,17 @@
     color: $white !important;
   }
 }
+
+.messages > span {
+  display: none;
+  font-family: $roboto;
+  font-weight: bold;
+  margin: 0;
+  padding: 6px 12px;
+  &.message-success {
+    color: transparentize($white,0.1);
+  }
+  &.message-fail, &.message-email, &.message-interest {
+    color: $red;
+  }
+}
