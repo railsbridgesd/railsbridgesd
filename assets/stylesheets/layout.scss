@@ -148,7 +148,7 @@ section {
   &.message-success {
     color: $green;
   }
-  &.message-fail, &.message-email {
+  &.message-fail, &.message-email, &.message-interest {
     color: $red;
   }
 }

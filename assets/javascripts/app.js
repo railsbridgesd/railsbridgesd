@@ -34,7 +34,9 @@ $(document).ready(function(){
     var message = $('[name="message"]').val();
     $('.messages > span').hide();
 
-    if (!validateEmail(inputEmail)) {
+    if (!interest) {
+      $('.message-interest').show();
+    } else if (!validateEmail(inputEmail)) {
       $('.message-email').show();
     } else {
       $.ajax({
@@ -58,7 +60,6 @@ $(document).ready(function(){
           $('.message-fail').show();
         }
       });
-
     }
   });
 

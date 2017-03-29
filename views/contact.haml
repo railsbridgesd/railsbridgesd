@@ -9,7 +9,7 @@
 .form-group
   %label Get involved!
   %select.form-control#interest{name: "interest"}
-    %option{class: "prompt", hidden: "hidden"} How would you like to be involved?
+    %option{class: "prompt", hidden: "hidden", value: ""} How would you like to be involved?
     %option{value: 'Student'} Student - I'm interested attending RailsBridge!
     %option{value: 'Volunteer'} Volunteer - I'm interested in teaching or TAing at RailsBridge
     %option{value: 'Sponsor'} Sponsor - I'm interested in donating or hosting the next RailsBridge workshop
@@ -24,5 +24,6 @@
   %span.loading
     %img{src: '/assets/icons/loading.svg'}
   %span.message-success Sent!
-  %span.message-fail Something went wrong!
-  %span.message-email Please input valid email!
+  %span.message-fail Something went wrong
+  %span.message-email Please input valid email
+  %span.message-interest Please choose how you would like to get involved
