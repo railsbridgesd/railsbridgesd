@@ -25,9 +25,10 @@
         .row
           .col-md-12
             %h1 Schedule
-
-        = haml :schedule
-        = haml :subscribe
+        -if active_workshop
+          = haml :schedule
+        -else
+          = haml :subscribe
 
     %section#sponsors
       .container
