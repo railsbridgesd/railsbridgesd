@@ -90,10 +90,6 @@ class RailsBridgeSanDiego < Sinatra::Base
 
   end
 
-  before do
-    puts '[Params]'
-    p params
-  end
   # ROUTES
 
   # Homepage
@@ -119,8 +115,6 @@ class RailsBridgeSanDiego < Sinatra::Base
       subject: "Message from #{name} (#{interest_type})",
       body: "#{message}"
     )
-
-    redirect '/'
   end
 
 end

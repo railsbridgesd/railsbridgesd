@@ -32,11 +32,12 @@ $(document).ready(function(){
     var inputEmail = $('[name="inputEmail"]').val();
     var interest = $('[name="interest"]').find(':selected').val();
     var message = $('[name="message"]').val();
+    $('.form-group > span').hide();
 
     if (!validateEmail(inputEmail)) {
-      alert("Please enter valid email");
+      $('.message-email').show();
     } else {
-      var request = $.ajax({
+      $.ajax({
         url: '/contact',
         method: 'POST',
         data: {
@@ -44,12 +45,20 @@ $(document).ready(function(){
           inputEmail: inputEmail,
           interest: interest,
           message: message
+        },
+        beforeSend: function() {
+          $('span.loading').show();
+        },
+        success: function() {
+          $('.form-group > span').hide();
+          $('.message-success').show();
+        },
+        error: function() {
+          $('.form-group > span').hide();
+          $('.message-fail').show();
         }
       });
 
-      request.done(function(){
-        alert('Success!');
-      });
     }
   });
 
