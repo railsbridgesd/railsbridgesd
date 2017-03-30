@@ -31,6 +31,12 @@ For this to work, you will need to update your .env file with values for `CONTAC
 
 Note: at this time, we only support sending contact form emails via Gmail. But if you need to send emails with another email service, you could probably tweak the Pony configuration details in `app.rb`.
 
+## Mailing list
+When there is no scheduled date for the next RailsBridge San Diego event, we will swap out our normal schedule information with a form that people can use to sign up for our mailing list and get notified when the next RailsBridge has an official date.
+
+The schedule date for the next RailsBridge San Diego event should be stroed in the NEXT_RAILSBRIDGE .env variable. The date should be in the following format: YYYY-MM-DD.
+
+To test how mailing list works in development, you can force the mailing list to show, even if there is a valid date for NEXT_RAILSBRIDGE, by going to http://localhost:3000/?list=show.
 
 ## Gotchas
 
