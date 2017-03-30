@@ -156,28 +156,28 @@ section {
   h3 {
     color: #999;
   }
-  img {
-    margin: 0 auto;
-    &.amazon {
-      height: 125px;
-    }
-    &.learn {
-      height: 120px;
-    }
-    &.procore {
-      margin-top: 50px;
-    }
-    &.appfolio {
-      margin-top: 25px;
-    }
-    &.planningcenter {
-      height: 90px;
-    }
-    &.sdruby {
-      height: 125px;
-      margin-bottom: -35px;
-    }
-  }
+  // img {
+  //   margin: 0 auto;
+  //   &.amazon {
+  //     height: 125px;
+  //   }
+  //   &.learn {
+  //     height: 120px;
+  //   }
+  //   &.procore {
+  //     margin-top: 50px;
+  //   }
+  //   &.appfolio {
+  //     margin-top: 25px;
+  //   }
+  //   &.planningcenter {
+  //     height: 90px;
+  //   }
+  //   &.sdruby {
+  //     height: 125px;
+  //     margin-bottom: -35px;
+  //   }
+  // }
 }
 
 .footer {
@@ -201,5 +201,24 @@ section {
   }
   .twitter-follow-button {
     margin-top: 12px;
+  }
+}
+
+
+.carousel{
+  .carousel-inner{
+    height: 300px;
+    img {
+      max-height: 170px;
+      margin: 0 auto;
+    }
+    h3, h2 {
+      text-align: center;
+    }
+  }
+  .carousel-control {
+    &.left, &.right {
+       background-image: none;
+    }
   }
 }
