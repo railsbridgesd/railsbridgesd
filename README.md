@@ -15,7 +15,7 @@ should happen automatically from the `.ruby-version` file)
 3. Update `.env` variables:   
    - GMAIL_USERNAME   - with your gmail username
    - GMAIL_PASSWORD   - with your gmail password
-   - GMAIL_EMAIL      - with your gmail email
+   - CONTACT_EMAIL    - with contact email address for RailsBridge
    - MAILCHIMP_KEY    - with your MailChimp API key
    - MAILCHIMP_LIST   - with your MailChimp List ID
    - NEXT_RAILSBRIDGE - with your next RailsBridge event date (2017-04-21)

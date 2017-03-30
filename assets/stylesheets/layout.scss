@@ -9,7 +9,7 @@ body {
   border-bottom: none;
   transition: all 0.5s ease-out;
   .navbar-brand {
-    background: url("/assets/brand_white.png") center left;
+    background: url("/assets/logo.brand.white.png") center left;
     background-repeat: no-repeat;
     background-size: 18%;
     color: #fff;
@@ -24,7 +24,7 @@ body {
     background-color: #fff;
     border-bottom: 1px solid #eee;
     .navbar-brand {
-      background: url("/assets/brand_peach.png") center left;
+      background: url("/assets/logo.brand.peach.png") center left;
       background-repeat: no-repeat;
       background-size: 18%;
       color: $peach;
@@ -199,7 +199,10 @@ section {
   iframe {
     max-width: 500px !important;
   }
+  .twitter-timeline {
+    margin-top: 7px !important;
+  }
   .twitter-follow-button {
-    margin-top: 12px;
+    margin-top: 10px;
   }
 }

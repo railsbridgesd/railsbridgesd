@@ -4,25 +4,26 @@
 
 .form-group
   %label Email
-  %input.form-control{type: "email", name: "inputEmail", id: "email"}
+  %input.form-control{type: "email", name: "email", id: "email"}
 
 .form-group
   %label Get involved!
   %select.form-control#interest{name: "interest"}
     %option{class: "prompt", hidden: "hidden", value: ""} How would you like to be involved?
-    %option{value: 'Student'} Student - I'm interested attending RailsBridge!
-    %option{value: 'Volunteer'} Volunteer - I'm interested in teaching or TAing at RailsBridge
-    %option{value: 'Sponsor'} Sponsor - I'm interested in donating or hosting the next RailsBridge workshop
-    %option{value: 'Organizer'} Organizer - I'm interested in helping plan the next RailsBridge workshop
+    %option{value: "Student"} Student - I'd like to attend RailsBridge
+    %option{value: "Volunteer"} Volunteer - I'd like to help out at RailsBridge
+    %option{value: "Teacher"} Teacher - I'd like to teach or TA at RailsBridge
+    %option{value: "Sponsor"} Sponsor - I'd like to donate or host the next RailsBridge workshop
+    %option{value: "Organizer"} Organizer - I'd like to help plan the next RailsBridge workshop
 
 .form-group
   %label Message
-  %textarea.form-control{type: "text", name: "message", id: "message", rows: 3}
+  %textarea.form-control{type: "text", name: "message", id: "message", rows: 4}
 
 .messages
   %button.btn.btn-primary{type: "submit"} Send Email
   %span.loading
-    %img{src: '/assets/icons/loading-1.svg'}
+    = image_tag "/assets/spinner.svg"
   %span.message-success Your message has been sent! We will contact you soon.
   %span.message-fail Sorry. Something went wrong. Please try again!
   %span.message-email Sorry. Please enter a valid email address!

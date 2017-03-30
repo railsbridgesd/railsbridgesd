@@ -109,15 +109,24 @@ class RailsBridgeSanDiego < Sinatra::Base
   # Contact form
   post '/contact' do
     name = params[:name]
-    sender_email = params[:inputEmail]
-    interest_type = params[:interest]
+    email = params[:email]
+    interest = params[:interest]
     message = params[:message]
-
+    
+    interest_text = case interest
+    when "Student"   then "I'd like to attend RailsBridge"
+    when "Volunteer" then "I'd like to help out at RailsBridge"
+    when "Teacher"   then "I'd like to teach or TA at RailsBridge"
+    when "Organizer" then "I'd like to help plan the next RailsBridge workshop"
+    when "Sponsor"   then "I'd like to donate or host the next RailsBridge workshop"
+    end
+    
     Pony.mail(
-      to: ENV["GMAIL_EMAIL"],
-      reply_to: "#{sender_email}",
-      subject: "Message from #{name} (#{interest_type})",
-      body: "#{message}"
+      to: ENV["CONTACT_EMAIL"],
+      from: email,
+      reply_to: email,
+      subject: interest_text,
+      body: "#{message}\n\nCheers,\n#{name}"
     )
   end
 

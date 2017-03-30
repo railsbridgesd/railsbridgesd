@@ -25,6 +25,8 @@ h3 {
   color: $gray;
   &.sample {
     margin-top: 60px;
+    padding-bottom: 3px;
+    border-bottom: 1px solid #ccc;
   }
 }
 

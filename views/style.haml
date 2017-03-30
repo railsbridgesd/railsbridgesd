@@ -11,9 +11,11 @@
       
         %h3.sample Sample text
 
-        %h1 Headline
+        %h1 (H1) Headline
         
-        %h2 Headline
+        %h2 (H2) Headline
+
+        %h3 (H3) Headline
 
         %h3.sample Sample buttons
         
@@ -25,9 +27,14 @@
           = link_to "Gray", "https://www.bridgetroll.org/events/342", class: "btn btn-primary btn-gray"
           = link_to "White", "https://www.bridgetroll.org/events/342", class: "btn btn-primary btn-white"
 
-        %h3.sample Sample responsive image
+        %h3.sample Sample image (normal)
         
-        %p To make a responsive, you should create two image files, one at @1x resolution and one at @2x resolution.
+        %p
+          = image_tag("assets/style/railsbridge.jpg", :size => "500x300")
+
+        %h3.sample Sample image (responsive)
+        
+        %p To make a responsive image, you should create two image files, one at @1x resolution and one at @2x resolution.
         
         %ul
           %li my_image@1x.jpg <= 128x128 pixels
@@ -43,9 +50,4 @@
         %p Note: images can be any size. Just make sure your 2x image is twice the size of the your 1x image.
         
         %p
-          = image_tag("assets/logo@1x.png", :size => "128x128")
-
-        %h3.sample Sample normal image
-        
-        %p
-          = image_tag("assets/railsbridge.jpg", :size => "500x300")
+          = image_tag("assets/style/logo@1x.png", :size => "128x128")

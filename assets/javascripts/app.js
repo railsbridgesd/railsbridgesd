@@ -31,14 +31,14 @@ $(document).ready(function(){
     e.preventDefault();
     
     var name = $('[name="name"]').val();
-    var inputEmail = $('[name="inputEmail"]').val();
+    var email = $('[name="email"]').val();
     var interest = $('[name="interest"]').find(':selected').val();
     var message = $('[name="message"]').val();
     $('.messages > span').hide();
 
     if (!interest) {
       $('.message-interest').show();
-    } else if (!validateEmail(inputEmail)) {
+    } else if (!validateEmail(email)) {
       $('.message-email').show();
     } else {
       $.ajax({
@@ -46,7 +46,7 @@ $(document).ready(function(){
         method: 'POST',
         data: {
           name: name,
-          inputEmail: inputEmail,
+          email: email,
           interest: interest,
           message: message
         },
