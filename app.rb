@@ -72,6 +72,9 @@ class RailsBridgeSanDiego < Sinatra::Base
     # Initialize sprockets
     set :environment, Sprockets::Environment.new
 
+    # Set public folder
+    set :static, true
+
     # Set asset paths
     environment.append_path "assets/images"
     environment.append_path "assets/javascripts"
@@ -147,6 +150,11 @@ class RailsBridgeSanDiego < Sinatra::Base
 
     # Add email to list
     gibbon.lists(ENV["MAILCHIMP_LIST"]).members.create(body: {email_address: email, status: "subscribed"})
+  end
+  
+  # Download sponsorship prospectus
+  get '/prospectus' do
+    send_file File.join(settings.public_folder, 'downloads/RailsBridge_San_Diego_Sponsorship_Prospectus.pdf'), :type => 'application/pdf'
   end
 
 end

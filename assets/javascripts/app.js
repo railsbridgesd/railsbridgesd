@@ -15,7 +15,7 @@ $(document).ready(function(){
   });
 
   // Scroll to section
-  $('.navbar a').click(function() {
+  $('.navbar a, #sponsors a').click(function() {
     var target = $(this.hash);
     target = target.length ? target : $('[name=' + this.hash.substr(1) +']');
     if (target.length) {
