@@ -32,11 +32,16 @@ For this to work, you will need to update your .env file with values for `CONTAC
 Note: at this time, we only support sending contact form emails via Gmail. But if you need to send emails with another email service, you could probably tweak the Pony configuration details in `app.rb`.
 
 ## Mailing list
-When there is no scheduled date for the next RailsBridge San Diego event, we will swap out our normal schedule information with a form that people can use to sign up for our mailing list and get notified when the next RailsBridge has an official date.
+When there is no scheduled date for the next RailsBridge San Diego event, we will swap out our normal schedule information with a form that people can use to sign up for our mailing list and get notified when the next RailsBridge has an official date. This form will appear three days after the start date of the last event. That way, if the event starts on a Friday, we will show the mailing list starting the following the Monday.
 
-The schedule date for the next RailsBridge San Diego event should be stroed in the NEXT_RAILSBRIDGE .env variable. The date should be in the following format: YYYY-MM-DD.
+Once a date for the next RailsBridge San Diego event has been schedule, we should update the site accordingly. The scheduled date is stored in the `NEXT_RAILSBRIDGE` variable. The date should be in the following format: `YYYY-MM-DD`.
 
-To test how mailing list works in development, you can force the mailing list to show, even if there is a valid date for NEXT_RAILSBRIDGE, by going to http://localhost:3000/?list=show.
+In development, just update `NEXT_RAILSBRIDGE` in your `.env` file.
+
+In production, you will need to run the following command:
+`heroku config:set NEXT_RAILSBRIDGE=2017-04-21`
+
+To test how mailing list works in development, you can force the mailing list to show, even if there is a valid future date for the `NEXT_RAILSBRIDGE`, by going to http://localhost:3000/?list=show.
 
 ## Gotchas
 
