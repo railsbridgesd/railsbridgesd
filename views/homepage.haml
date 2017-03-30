@@ -12,7 +12,7 @@
         %h1 RailsBridge San Diego
 
         %h2
-          RailsBridge is a 
+          RailsBridge is a
           %b free
           two-day workshop where women can
           %span
@@ -31,63 +31,7 @@
           = haml :subscribe
 
     %section#sponsors
-      .container
-        .row
-          .col-md-12
-            %h1 Sponsors
-        .row
-          .col-md-12.text-center
-            %hr
-            %h2 Event Sponsors
-        .row
-          .col-md-12.text-center
-            %h3 Diamond Level
-        .row
-          .col-md-3
-          .col-md-6
-            %p= link_to image_tag("/assets/sponsors/amazon.png", class: "img-responsive amazon"), "https://www.amazon.jobs/en/locations/sandiego?base_query=&loc_query=&job_count=10&result_limit=10&sort=relevant&location%5B%5D=sandiego&cache", target: "_blank"
-          .col-md-3
-        .row
-          .col-md-12.text-center
-            %h3 Silver Level
-        .row
-          .col-md-2
-          .col-md-4
-            %p= link_to image_tag("/assets/sponsors/appfolio.png", class: "img-responsive appfolio"), "https://www.appfolio.com", target: "_blank"
-          .col-md-4
-            %p= link_to image_tag("/assets/sponsors/planningcenter.png", class: "img-responsive planningcenter"), "https://planning.center", target: "_blank"
-          .col-md-2
-
-      .container#annual_sponsors
-        .row
-          .col-md-12.text-center
-            %hr
-            %h2 Annual Sponsors
-        .row
-          .col-md-12.text-center
-            %h3 Platinum Level
-        .row
-          .col-md-2
-          .col-md-4
-            %p= link_to image_tag("/assets/sponsors/learn.png", class: "img-responsive learn"), "https://www.learnacademy.org", target: "_blank"
-          .col-md-4
-            %p= link_to image_tag("/assets/sponsors/procore.png", class: "img-responsive procore"), "https://www.procore.com", target: "_blank"
-          .col-md-2
-
-
-      .container#thanks
-        .row
-          .col-md-12.text-center
-            %hr
-            %h2 Special Thanks
-        .row
-          .col-md-3
-          .col-md-6
-            %p= link_to image_tag("/assets/sponsors/sdruby.png", class: "img-responsive sdruby"), "https://www.meetup.com/sdruby/", target: "_blank"
-          .col-md-3
-        .row
-          .col-md-12
-            %hr
+      = haml :sponsors
 
     %section#volunteer
       .container
@@ -146,8 +90,8 @@
         %h2 Do I need to know how to code to attend the workshop?
 
         %p
-          No! You can attend with any level of experience, from 
-          %span.quote ‘I’ve never coded before’ 
+          No! You can attend with any level of experience, from
+          %span.quote ‘I’ve never coded before’
           to
           %span.quote ‘I’m a web developer who wants to learn Ruby’
           \.
@@ -155,7 +99,7 @@
         %p At the beginning of the workshop will separate into groups based on experience level, so everyone is learning the material that is right for them.
 
         %h2 Do I need to be a woman to attend the workshop?
-        
+
         %p No &mdash; but you can attend as a guest of a woman. If you are NOT a member of the workshop’s target population, you must sign up with someone who is!
 
         %h2 Do I need to bring my own laptop to the workshop?

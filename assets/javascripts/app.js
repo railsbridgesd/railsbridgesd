@@ -29,7 +29,7 @@ $(document).ready(function(){
   // Post to email
   $('.footer button[type="submit"]').on("click", function(e) {
     e.preventDefault();
-    
+
     var name = $('[name="name"]').val();
     var email = $('[name="email"]').val();
     var interest = $('[name="interest"]').find(':selected').val();
@@ -68,7 +68,6 @@ $(document).ready(function(){
 
 });
 
-
 // FUNCTIONS
 
 function validateEmail(email) {
@@ -79,7 +78,7 @@ function validateEmail(email) {
   ** validateEmail("safsd@sdfasd@.com") => false
   ** validateEmail("") => false
   */
-  
+
   var re = /^[^@]+@[^@]+$/;
 
   return (re.test(email)) ? true : false;
