@@ -1,0 +1,43 @@
+.container
+  .row
+    .col-md-12
+      %h1 Sponsors
+      %p We couldn't do any of this without the help of the San Diego tech community. Thank you to all of our sponsors!
+      %hr
+      .carousel.slide#sponsorsCarousel{:data => {:ride => "carousel"}}
+        .carousel-inner
+          .item.active
+            %h2 Event Sponsor
+            %h3 Diamond Level
+            %p= link_to image_tag("/assets/sponsors/diamond1.png", class: "img-responsive amazon"), "https://www.amazon.jobs/en/locations/sandiego?base_query=&loc_query=&job_count=10&result_limit=10&sort=relevant&location%5B%5D=sandiego&cache", target: "_blank"
+          .item
+            %h2 Event Sponsor
+            %h3 Silver Level
+            .row
+              .col-xs-2
+              .col-xs-4
+                %p= link_to image_tag("/assets/sponsors/silver1.png", class: "img-responsive appfolio"), "https://www.appfolio.com", target: "_blank"
+              .col-xs-4
+                %p= link_to image_tag("/assets/sponsors/silver2.png", class: "img-responsive planningcenter"), "https://planning.center", target: "_blank"
+              .col-xs-2
+          .item
+            %h2 Annual Sponsor
+            %h3 Platinum Level
+            .row
+              .col-xs-2
+              .col-xs-4
+                %p= link_to image_tag("/assets/sponsors/platinum1.png", class: "img-responsive learn"), "https://www.learnacademy.org", target: "_blank"
+              .col-xs-4
+                %p= link_to image_tag("/assets/sponsors/platinum2.png", class: "img-responsive procore"), "https://www.procore.com", target: "_blank"
+              .col-xs-2
+          .item
+            %h2 Special Thanks
+            %h3
+            %p= link_to image_tag("/assets/sponsors/specialthanks1.png", class: "img-responsive sdruby"), "https://www.meetup.com/sdruby/", target: "_blank"
+
+
+        %a.left.carousel-control{href: "#sponsorsCarousel", data: {:slide => "prev"}}
+          %i.glyphicon.glyphicon-chevron-left
+        %a.right.carousel-control{href: "#sponsorsCarousel", data: {:slide => "next"}}
+          %i.glyphicon.glyphicon-chevron-right
+      %hr
