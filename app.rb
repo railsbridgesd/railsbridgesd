@@ -112,7 +112,7 @@ class RailsBridgeSanDiego < Sinatra::Base
     email = params[:email]
     interest = params[:interest]
     message = params[:message]
-    
+
     interest_text = case interest
     when "Student"   then "I'd like to attend RailsBridge"
     when "Volunteer" then "I'd like to help out at RailsBridge"
@@ -120,7 +120,7 @@ class RailsBridgeSanDiego < Sinatra::Base
     when "Organizer" then "I'd like to help plan the next RailsBridge workshop"
     when "Sponsor"   then "I'd like to donate or host the next RailsBridge workshop"
     end
-    
+
     Pony.mail(
       to: ENV["CONTACT_EMAIL"],
       from: email,
@@ -141,8 +141,6 @@ class RailsBridgeSanDiego < Sinatra::Base
 
     # Add email to list
     gibbon.lists(ENV["MAILCHIMP_LIST"]).members.create(body: {email_address: email, status: "subscribed"})
-
-    redirect '/'
   end
 
 end
