@@ -87,15 +87,13 @@ section {
   }
 }
 
-.subscribe {
-  margin-bottom: 20px;
-  .form-inline .form-control {
-    min-width: 300px;
-  }
-}
-
-
 #schedule {
+  .subscribe {
+    margin-bottom: 20px;
+    .form-inline .form-control {
+      min-width: 300px;
+    }
+  }
   .schedule-block {
     background-color: rgba(255, 255, 255, .1);
     border-radius: .2em;
@@ -147,33 +145,37 @@ section {
   }
 }
 
-#sponsors,
-#annual_sponsors,
-#thanks {
+#sponsors {
   h2 {
     font-size: 24px;
   }
   h3 {
     color: #999;
   }
+  hr {
+    margin: 0;
+  }
+  .slide + hr {
+    margin-top: -12px;
+  }
   // img {
   //   margin: 0 auto;
-  //   &.amazon {
+  //   &#amazon {
   //     height: 125px;
   //   }
-  //   &.learn {
+  //   &#learn {
   //     height: 120px;
   //   }
-  //   &.procore {
+  //   &#procore {
   //     margin-top: 50px;
   //   }
-  //   &.appfolio {
+  //   &#appfolio {
   //     margin-top: 25px;
   //   }
-  //   &.planningcenter {
+  //   &#planningcenter {
   //     height: 90px;
   //   }
-  //   &.sdruby {
+  //   &#sdruby {
   //     height: 125px;
   //     margin-bottom: -35px;
   //   }
