@@ -46,7 +46,7 @@ $(document).ready(function(){
         success: function() {
           $('.mailing-list .messages > span').hide();
           $('.mailing-list .messages .message-success').show();
-          $('form.mailing-list').get(0).reset();
+          $('.mailing-list form').get(0).reset();
         },
         error: function() {
           $('.mailing-list .messages > span').hide();
