@@ -26,20 +26,50 @@ $(document).ready(function(){
     }
   });
 
+  // Post to mailing list
+  $('.mailing-list button[type="submit"]').on('click', function(e) {
+    e.preventDefault();
+
+    var email = $('#email').val();
+    $('.mailing-list .messages > span').hide();
+
+    if (!validateEmail(email)) {
+      $('.mailing-list .messages .message-email').show();
+    } else {
+      $.ajax({
+        url: '/subscribe',
+        method: 'POST',
+        data: {email: email},
+        beforeSend: function() {
+          $('.mailing-list span.loading').show();
+        },
+        success: function() {
+          $('.mailing-list .messages > span').hide();
+          $('.mailing-list .messages .message-success').show();
+          $('form.mailing-list').get(0).reset();
+        },
+        error: function() {
+          $('.mailing-list .messages > span').hide();
+          $('.mailing-list .message-fail').show();
+        }
+      });
+    }
+  });
+
   // Post to email
-  $('.footer button[type="submit"]').on("click", function(e) {
+  $('.footer button[type="submit"]').on('click', function(e) {
     e.preventDefault();
 
     var name = $('[name="name"]').val();
     var email = $('[name="email"]').val();
     var interest = $('[name="interest"]').find(':selected').val();
     var message = $('[name="message"]').val();
-    $('.messages > span').hide();
+    $('.footer .messages > span').hide();
 
     if (!interest) {
       $('.message-interest').show();
     } else if (!validateEmail(email)) {
-      $('.message-email').show();
+      $('.footer .messages .message-email').show();
     } else {
       $.ajax({
         url: '/contact',
@@ -54,12 +84,12 @@ $(document).ready(function(){
           $('span.loading').show();
         },
         success: function() {
-          $('.messages > span').hide();
+          $('.footer .messages > span').hide();
           $('.message-success').show();
           $(".footer form").get(0).reset();
         },
         error: function() {
-          $('.messages > span').hide();
+          $('.footer .messages > span').hide();
           $('.message-fail').show();
         }
       });
