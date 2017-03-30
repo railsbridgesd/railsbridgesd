@@ -114,7 +114,7 @@ class RailsBridgeSanDiego < Sinatra::Base
     message = params[:message]
 
     Pony.mail(
-      to: 'railsbridgesd@gmail.com',
+      to: ENV["GMAIL_EMAIL"],
       reply_to: "#{sender_email}",
       subject: "Message from #{name} (#{interest_type})",
       body: "#{message}"
@@ -123,7 +123,7 @@ class RailsBridgeSanDiego < Sinatra::Base
 
   # Mailing list signup form
   post '/subscribe' do
-    
+
     # Get email and remove whitespace
     email = params[:email].strip
 
