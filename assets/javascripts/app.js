@@ -30,7 +30,7 @@ $(document).ready(function(){
   $('.mailing-list button[type="submit"]').on('click', function(e) {
     e.preventDefault();
 
-    var email = $('#email').val();
+    var email = $('#subscribe_email').val();
     $('.mailing-list .messages > span').hide();
 
     if (!validateEmail(email)) {
@@ -60,10 +60,10 @@ $(document).ready(function(){
   $('.footer button[type="submit"]').on('click', function(e) {
     e.preventDefault();
 
-    var name = $('[name="name"]').val();
-    var email = $('[name="email"]').val();
-    var interest = $('[name="interest"]').find(':selected').val();
-    var message = $('[name="message"]').val();
+    var name = $('#name').val();
+    var email = $('#email').val();
+    var interest = $('#interest').find(':selected').val();
+    var message = $('#message').val();
     $('.footer .messages > span').hide();
 
     if (!interest) {
@@ -81,16 +81,16 @@ $(document).ready(function(){
           message: message
         },
         beforeSend: function() {
-          $('span.loading').show();
+          $('.footer span.loading').show();
         },
         success: function() {
           $('.footer .messages > span').hide();
-          $('.message-success').show();
+          $('.footer .message-success').show();
           $(".footer form").get(0).reset();
         },
         error: function() {
           $('.footer .messages > span').hide();
-          $('.message-fail').show();
+          $('.footer .message-fail').show();
         }
       });
     }
