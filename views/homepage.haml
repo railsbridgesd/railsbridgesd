@@ -69,13 +69,27 @@
     %section#resources
       .container
         %h1 Resources
+        
+        %p Want to learn more about Ruby or Ruby on Rails? Interested in becoming a fulltime developer?
 
         %ul
-          %li Lorem ipsum dolor sit amet
-          %li Consectetur adipiscing elit
-          %li Sed do eiusmod tempor incididunt ut
-          %li Labore et dolore magna aliqua. Ut enim ad minim veniam,
-          %li Quis nostrud exercitation ullamco laboris nisi ut
+          %li
+            = link_to "Try Ruby", "http://tryruby.org/"
+            &mdash; Try out Ruby code right in your browser!
+          %li
+            = link_to "Code Academy", "https://www.codecademy.com"
+            &mdash; Learn to code interactively, for free.
+          %li
+            = link_to "SD Ruby", "http://www.meetup.com/sdruby/"
+            &mdash; Learn more about Ruby on Rails at this monthly meetup of local Ruby developers.
+          %li
+            = link_to "Full Stack Talks", "http://www.meetup.com/fullstacktalks/"
+            &mdash; Live in North County? Check out this monthly meetup of web designers and developers.
+          %li
+            = link_to "Bootcamps in San Diego", "https://www.coursereport.com/cities/san-diego"
+            &mdash; Interested in becoming a developer? San Diego has several excellent code schools.
+          
+        %p= link_to "More Resources", "http://installfest.railsbridge.org/workshop/resources", class: "btn btn-primary"
 
     %section#curriculum
       .container
