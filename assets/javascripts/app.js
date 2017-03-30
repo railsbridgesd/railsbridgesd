@@ -65,7 +65,18 @@ $(document).ready(function(){
       });
     }
   });
-
+  
+  // Lazy load carousel images 
+  $(function() {
+      $('.carousel.lazy').bind('slide.bs.carousel', function (e) {
+          var images = $(e.relatedTarget).find('img[data-src]');
+          images.each(function() {
+            $(this).attr('src', $(this).data('src'));
+            $(this).removeAttr('data-src');
+          });
+      });
+  });
+  
 });
 
 // FUNCTIONS

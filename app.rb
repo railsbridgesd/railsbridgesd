@@ -29,6 +29,12 @@ def image_tag(image, options = {})
     options[:alt] = File.basename(image_name,File.extname(image_name))
   end
 
+  # Disable normal image src if lazy loading image
+  if options[:lazy] == "true"
+      options["data-src"] = options[:src]
+      options.delete(:src)
+  end
+  
   # Insert attributes into image tag
   attributes = " " + options.map{|k,v| k.to_s + "=" + '"' + v + '" '}.join(" ")
   "<img " + attributes + ">"

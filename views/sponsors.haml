@@ -4,21 +4,21 @@
       %h1 Sponsors
       %p We couldn't do any of this without the help of the San Diego tech community. Thanks to all of our awesome sponsors!
       %hr
-      .carousel.slide#sponsorsCarousel{:data => {:ride => "carousel"}}
+      .carousel.slide.lazy#sponsorsCarousel{:data => {:ride => "carousel"}}
         .carousel-inner
           .item.active
             %h2 Event Sponsor
             %h3 Diamond Level
-            %p= link_to image_tag("/assets/sponsors/diamond1.png", class: "img-responsive amazon"), "https://www.amazon.jobs/en/locations/sandiego?base_query=&loc_query=&job_count=10&result_limit=10&sort=relevant&location%5B%5D=sandiego&cache", target: "_blank"
+            = link_to image_tag("/assets/sponsors/diamond1.png", class: "img-responsive amazon"), "https://www.amazon.jobs/en/locations/sandiego?base_query=&loc_query=&job_count=10&result_limit=10&sort=relevant&location%5B%5D=sandiego&cache", target: "_blank"
           .item
             %h2 Event Sponsor
             %h3 Silver Level
             .row
               .col-xs-2
               .col-xs-4
-                %p= link_to image_tag("/assets/sponsors/silver1.png", class: "img-responsive appfolio"), "https://www.appfolio.com", target: "_blank"
+                = link_to image_tag("/assets/sponsors/silver1.png", class: "img-responsive appfolio", lazy: "true"), "https://www.appfolio.com", target: "_blank"
               .col-xs-4
-                %p= link_to image_tag("/assets/sponsors/silver2.png", class: "img-responsive planningcenter"), "https://planning.center", target: "_blank"
+                = link_to image_tag("/assets/sponsors/silver2.png", class: "img-responsive planningcenter", lazy: "true"), "https://planning.center", target: "_blank", lazy: "true"
               .col-xs-2
           .item
             %h2 Annual Sponsor
@@ -26,14 +26,14 @@
             .row
               .col-xs-2
               .col-xs-4
-                %p= link_to image_tag("/assets/sponsors/platinum1.png", class: "img-responsive learn"), "https://www.learnacademy.org", target: "_blank"
+                = link_to image_tag("/assets/sponsors/platinum1.png", class: "img-responsive learn", lazy: "true"), "https://www.learnacademy.org", target: "_blank", lazy: "true"
               .col-xs-4
-                %p= link_to image_tag("/assets/sponsors/platinum2.png", class: "img-responsive procore"), "https://www.procore.com", target: "_blank"
+                = link_to image_tag("/assets/sponsors/platinum2.png", class: "img-responsive procore", lazy: "true"), "https://www.procore.com", target: "_blank", lazy: "true"
               .col-xs-2
           .item
             %h2 Special Thanks
             %h3
-            %p= link_to image_tag("/assets/sponsors/specialthanks1.png", class: "img-responsive sdruby"), "https://www.meetup.com/sdruby/", target: "_blank"
+            = link_to image_tag("/assets/sponsors/specialthanks1.png", class: "img-responsive sdruby", lazy: "true"), "https://www.meetup.com/sdruby/", target: "_blank", lazy: "true"
 
 
         %a.left.carousel-control{href: "#sponsorsCarousel", data: {:slide => "prev"}}
