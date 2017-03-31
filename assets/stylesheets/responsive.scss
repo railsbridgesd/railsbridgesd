@@ -12,3 +12,23 @@
     }
   }
 }
+
+// iPad and below
+@media (max-width: 768px) {
+  
+  // Push header image below navbar
+  #header {
+    margin-top: 50px !important;
+  }
+  
+}
+
+// iPhone 7/6 and below
+@media (max-width: 376px) {
+  
+  // Hide carousel controls
+  .carousel-control {
+    display: none;
+  }
+  
+}
