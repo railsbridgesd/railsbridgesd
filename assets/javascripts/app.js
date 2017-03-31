@@ -112,6 +112,36 @@ $(document).ready(function(){
     interval: 4000
   });
 
+  // Resize #header height to match responsive #header image height
+  $(window).resize(function () { 
+    
+    // Header images are responsive, so they shrink as the viewport width shrinks.
+    // However, we need to make sure that the #header height also shrinks to match.
+    // Otherwise, there will be unwanted whitespace between the bottom of the #header image
+    // and the #intro content.
+    
+    // Also, we want to avoid 'flash of unstyled content' behavior with the header image
+    // (because it can push other site content down as it fully loads).
+    
+    // To prevent this, we can hard-code values for min and max height on the #header.
+    // But, when we hard-code the values, but it looks bad when the viewport width shrinks,
+    // and the header image scales down responsively.
+    
+    // But, since this only works at certain viewport widths, so we want to dynamically
+    // set the min and max height to match the current height of our responsive
+    // header image whenever the page is resized.
+  
+    // Grab height of first header image
+    var header_image_height = $("#header .item").first().height();
+    
+    // Set #header min and max height if #header image is smaller than 550 pixels high
+    if (header_image_height < 550) {
+      $('#header').css('min-height', header_image_height);
+      $('#header').css('max-height', header_image_height);
+    }
+    
+  });
+  
 });
 
 

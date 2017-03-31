@@ -60,11 +60,26 @@ section {
 }
 
 #header {
-  background-image: url("/assets/header.jpg");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 550px;
+  min-height: 550px;
+  max-height: 550px;
+  padding: 0;
+  overflow: hidden;
+  width: 100%;
+  img {
+    margin: 0 auto;
+    width: 100%;
+  }
+  .carousel {
+    .carousel-inner {
+      height: 550px;
+    }
+    .carousel-control {
+      top: -25px;
+      &.left, &.right {
+        background: none;
+      }
+    }
+  }
 }
 
 #intro {
@@ -161,6 +176,31 @@ section {
   .slide + hr {
     margin-top: -16px;
   }
+  .carousel {
+    .carousel-inner {
+      height: 300px;
+      img {
+        max-height: 170px;
+        margin: 0 auto;
+      }
+      h3, h2 {
+        text-align: center;
+      }
+    }
+    .carousel-control {
+      opacity: 1;
+      &.left, &.right {
+         background-image: none;
+      }
+      i {
+        color: $peach;
+        text-shadow: none;
+        &:hover {
+          color: $red;
+        }
+      }
+    }
+  }
   // img {
   //   margin: 0 auto;
   //   &.amazon {
@@ -222,32 +262,5 @@ section {
   }
   .twitter-follow-button {
     margin-top: 10px;
-  }
-}
-
-
-.carousel{
-  .carousel-inner{
-    height: 300px;
-    img {
-      max-height: 170px;
-      margin: 0 auto;
-    }
-    h3, h2 {
-      text-align: center;
-    }
-  }
-  .carousel-control {
-    opacity: 1;
-    &.left, &.right {
-       background-image: none;
-    }
-    i {
-      color: $peach;
-      text-shadow: none;
-      &:hover {
-        color: $red;
-      }
-    }
   }
 }

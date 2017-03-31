@@ -6,11 +6,12 @@
     = haml :navbar
 
     %section#header.container-fluid
+      = haml :header
 
     %section#intro
       = haml :intro
 
-    %section.peach#schedule
+    %section#schedule.peach
       - if @active_workshop and params[:list] != "show"
         = haml :schedule
       - else
