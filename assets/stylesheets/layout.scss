@@ -238,8 +238,16 @@ section {
     }
   }
   .carousel-control {
+    opacity: 1;
     &.left, &.right {
        background-image: none;
+    }
+    i {
+      color: $peach;
+      text-shadow: none;
+      &:hover {
+        color: $red;
+      }
     }
   }
 }
