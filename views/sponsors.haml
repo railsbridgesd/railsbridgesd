@@ -6,11 +6,11 @@
       %hr
       .carousel.slide.lazy#sponsorsCarousel{:data => {:ride => "carousel"}}
         .carousel-inner
-          .item.active{:data => {:interval => 5000}}
+          .item.active
             %h2 Event Sponsor
             %h3 Diamond Level
             = link_to image_tag("/assets/sponsors/diamond1.png", class: "img-responsive amazon"), "https://www.amazon.jobs/en/locations/sandiego?base_query=&loc_query=&job_count=10&result_limit=10&sort=relevant&location%5B%5D=sandiego&cache"
-          .item{:data => {:interval => 3000}}
+          .item
             %h2 Event Sponsor
             %h3 Silver Level
             .row
@@ -20,7 +20,7 @@
               .col-xs-4
                 = link_to image_tag("/assets/sponsors/silver2.png", class: "img-responsive planningcenter", lazy: "true"), "https://planning.center", lazy: "true"
               .col-xs-2
-          .item.item{:data => {:interval => 3000}}
+          .item
             %h2 Annual Sponsor
             %h3 Platinum Level
             .row
@@ -30,7 +30,7 @@
               .col-xs-4
                 = link_to image_tag("/assets/sponsors/platinum2.png", class: "img-responsive procore", lazy: "true"), "https://www.procore.com", lazy: "true"
               .col-xs-2
-          .item.item{:data => {:interval => 1000}}
+          .item
             %h2 Special Thanks
             %h3
             = link_to image_tag("/assets/sponsors/specialthanks1.png", class: "img-responsive sdruby", lazy: "true"), "https://www.meetup.com/sdruby/", lazy: "true"

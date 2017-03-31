@@ -107,27 +107,9 @@ $(document).ready(function(){
       });
   });
 
-  // Carousel intervals
-  var t;
-  var start = $('#sponsorsCarousel').find('.active').attr('data-interval');
-  t = setTimeout(function(){
-           $('#sponsorsCarousel').carousel({interval: 2000})
-      }, start-2000);
-
-  $('#sponsorsCarousel').on('slid.bs.carousel', function () {
-       clearTimeout(t);
-       var duration = $(this).find('.active').attr('data-interval');
-
-       $('#sponsorsCarousel').carousel('pause');
-       t = setTimeout("$('#sponsorsCarousel').carousel();", duration-2000);
-  })
-
-  $('.carousel-control.right').on('click', function(){
-      clearTimeout(t);
-  });
-
-  $('.carousel-control.left').on('click', function(){
-      clearTimeout(t);
+  // Set carousel interval
+  $('.carousel').carousel({
+    interval: 4000
   });
 
 
