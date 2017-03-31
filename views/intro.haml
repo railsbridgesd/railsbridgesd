@@ -1,0 +1,11 @@
+.container.text-center
+  %h1 RailsBridge San Diego
+
+  %h2
+    RailsBridge is a
+    %b free
+    two-day workshop where women can
+    %span
+      learn how to build a web app using Ruby on Rails.
+  -if @active_workshop
+    %p= link_to "Sign Up for RailsBridge San Diego", "https://www.bridgetroll.org/events/342", class: "btn btn-primary"

@@ -8,173 +8,33 @@
     %section#header.container-fluid
 
     %section#intro
-      .container.text-center
-        %h1 RailsBridge San Diego
-
-        %h2
-          RailsBridge is a
-          %b free
-          two-day workshop where women can
-          %span
-            learn how to build a web app using Ruby on Rails.
-        -if @active_workshop
-          %p= link_to "Sign Up for RailsBridge San Diego", "https://www.bridgetroll.org/events/342", class: "btn btn-primary"
+      = haml :intro
 
     %section.peach#schedule
-      .container
-        .row
-          .col-md-12
-            %h1 Schedule
-        - if @active_workshop and params[:list] != "show"
-          = haml :schedule
-        - else
-          = haml :subscribe
+      - if @active_workshop and params[:list] != "show"
+        = haml :schedule
+      - else
+        = haml :subscribe
 
     %section#sponsors
       = haml :sponsors
 
     %section#volunteer
-      .container
-        %h1 Volunteer
-
-        %p Railsbridge San Diego wouldn't be possible without the help of awesome volunteers from the San Diego tech community! 
-
-        %p Interested in volunteering? Here's how you can help:
-        
-        %ul
-          %li
-            %strong Teach a class
-            &mdash; Don’t worry, we provide the curriculum. If you know Ruby on Rails, you can teach at RailsBridge. 
-          %li
-            %strong Be a TA
-            &mdash; Not sure about teaching? Well, you can be a Teaching Assistant and help students whenever they get stuck.
-          %li
-            %strong Setup laptops
-            &mdash; Set up student laptops with everything they need for Ruby on Rails development
-          %li
-            %strong Not a developer?
-            &mdash; There are other ways to help! Become an organizer or sign up to help during the workshop. 
-
-        %p
-          Also, if you plan to volunteer, make sure to read the 
-          = link_to "Installfest setup guide", "http://installfest.railsbridge.org/installfest/installfest"
-          and the
-          = link_to "RailsBridge curriculum", "http://docs.railsbridge.org/intro-to-rails/"
-          before you come to RailsBridge San Diego. You can also
-          = link_to "contact us", "#footer"
-          if you have any questions.
-
-        %p= link_to "Sign up to Volunteer", "https://www.bridgetroll.org/events/342", class: "btn btn-primary"
+      = haml :volunteer
 
     %section#resources
-      .container
-        %h1 Resources
-        
-        %p Want to learn more about Ruby or Ruby on Rails? Interested in becoming a fulltime developer?
-
-        %ul
-          %li
-            = link_to "Try Ruby", "http://tryruby.org/"
-            &mdash; Try out Ruby code right in your browser!
-          %li
-            = link_to "Code Academy", "https://www.codecademy.com"
-            &mdash; Learn to code interactively, for free.
-          %li
-            = link_to "SD Ruby", "http://www.meetup.com/sdruby/"
-            &mdash; Learn more about Ruby on Rails at this monthly meetup of local Ruby developers.
-          %li
-            = link_to "Full Stack Talks", "http://www.meetup.com/fullstacktalks/"
-            &mdash; Live in North County? Check out this monthly meetup of web designers and developers.
-          %li
-            = link_to "Bootcamps in San Diego", "https://www.coursereport.com/cities/san-diego"
-            &mdash; Interested in becoming a developer? San Diego has several excellent code schools.
-          
-        %p= link_to "More Resources", "http://installfest.railsbridge.org/workshop/resources", class: "btn btn-primary"
+      = haml :resources
 
     %section#curriculum
-      .container
-        %h1 Curriculum
-
-        %p The <a href="http://curriculum.railsbridge.org/docs/">RailsBridge Curriculum</a> is online so you can get an advance look at what you'll be learning. Most classes follow the RailsBridge  <a href="http://curriculum.railsbridge.org/intro-to-rails/">Introductory Curriculum</a> (our "Suggestotron" project) but some workshops cover the Ruby language, HTML and CSS for beginners, or Intermediate Rails.
-
-        %p= link_to "Learn More!", "http://docs.railsbridge.org/docs/", class: "btn btn-primary"
+      = haml :curriculum
 
     %section#conduct
-      .container
-        %h1 Code of Conduct
-
-        %p We seek to create a community of software developers that are reflective of the diversity in the general population. To that end, we are dedicated to creating welcoming and friendly learning environments.
-
-        %p All participants agree to the following:
-
-        %ul
-          %li Everyone has something to contribute. Everyone deserves access to materials and community that will help them learn. As long as an individual can be respectful and not disruptive to other participants, they deserve to participate.
-          %li If there is limited space and resources, anyone is welcome to replicate an event, such that more opportunities may be available. All curricula and organizing materials are open source and free. Provided that the organizer and event conform to project guidelines, we will help.
-          %li
-            A harassment-free experience for everyone is essential. See our
-            #{link_to "anti-harassment policy", "http://bridgefoundry.org/code-of-conduct/anti-harrassment-policy.html"}
-
-        %p Furthermore, workshops and associated “after party” must be safe environments focused on learning.
-
-        %p= link_to "Read More", "http://bridgefoundry.org/code-of-conduct/", class: "btn btn-primary"
+      = haml :conduct
 
     %section#faq
-      .container
-        %h1 FAQ
-
-        %h2 Who can attend the workshop?
-
-        %p RailsBridge workshops focus on providing opportunities for under-represented populations in tech. Our primary outreach is towards women, but we all support diversity in gender, race, sexual orientation, ability, and class. So, if you think you belong to an under-represented population in tech, you’re probably right &mdash; so come join us!
-
-        %h2 Do I need to know how to code to attend the workshop?
-
-        %p
-          No! You can attend with any level of experience, from
-          %span.quote ‘I’ve never coded before’
-          to
-          %span.quote ‘I’m a web developer who wants to learn Ruby’
-          \.
-
-        %p At the beginning of the workshop will separate into groups based on experience level, so everyone is learning the material that is right for them.
-
-        %h2 Do I need to be a woman to attend the workshop?
-
-        %p No &mdash; but you can attend as a guest of a woman. If you are NOT a member of the workshop’s target population, you must sign up with someone who is!
-
-        %h2 Do I need to bring my own laptop to the workshop?
-
-        %p Yes. A laptop is required.
-
-        %h2 Do I need to do anything to prepare for the workshop?
-
-        %p It's a really good idea to start the Installfest ahead of time, and download any of the necessary things that your organizer emailed you about (RailsInstaller, perhaps, or XCode, or Sublime Text). Other than that, come as you are!
-
-        %h2 Do I have to attend the Installfest?
-
-        %p Yes! The Installfest is a crucial part of the weekend, even if you’ve already gone through the instructions independently. There are a ton of moving parts when setting up a development environment, and the reason that we’re able to get through the curriculum on Saturday is that every single student has had their development environment checked and has been awarded a sticker for their success. There are also enough changing parts that even if you’ve been to a workshop in the past, you should attend the Installfest to get re-verified, because Rails and its development environment changes frequently.
-
-        %h2 Do I really have to attend the Installfest?
-
-        %p Yes, really. There will be pizza, we promise. And fun people to talk to. And you don’t have to be there very long if you’ve already gotten through all the steps. (But if you haven’t gotten through all the steps ahead of time, please come early in the evening, because an install can take a few hours depending on what hiccups we need to work through.)
-
-        %h2 How much does childcare cost?
-
-        %p Nothing! RailsBridge hires a sitter on the house so that there’s nothing between you and your computer. Childcare is typically provided in a lounge or conference room near to your classroom. Just let the organizer know ahead of time so we can make arrangements.
+      = haml :faq
 
     %section#about
-      .container
-        %h1 About
-
-        %p RailsBridge San Diego is a day and a half FREE workshop that will take students through building a complete web application using Ruby on Rails. By the end of the workshop, you'll make a live web app on the internet that can connect to a database and read &amp; write information. We'll meet up Friday night to install all of the software you need on your laptop, and then spend Saturday learning and writing code in an all-day workshop.
-
-        %p RailsBridge is an organization that teaches people to code because we believe that the people making technology should accurately reflect the diversity of those using it. We want to push for all kinds of diversity in tech: gender, race, sexual orientation, ability, and class. Women were the first population we focused on, but aren't the last. We value acceptance, enthusiasm, and hard work. The RailsBridge community thrives on optimism and a love for making great things.
-
-        %p RailsBridge workshops focus on providing opportunities for under-represented populations in tech. This is an Outreach to Women Workshop. It is emphatically LGBTQQIP2SAA friendly. If you are not a member of an underrepresented group, you can attend as a student if you're the guest of someone who is a member of the workshop's target population. The workshop provides an opportunity for you to participate in outreach efforts and encourage someone to attend with you who might not otherwise come.
-                
-        %form{:action => "https://www.paypal.com/cgi-bin/webscr", :method => "post", :target => "_top"}
-          %input{:name => "cmd", :type => "hidden", :value => "_s-xclick"}
-          %input{:name => "hosted_button_id", :type => "hidden", :value => "FZCNZRWJW2UZ8"}
-          %input{:alt => "PayPal - The safer, easier way to pay online!", :border => "0", :name => "submit", :src => "https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif", :type => "image"}
-          %img{:alt => "", :border => "0", :height => "1", :src => "https://www.paypalobjects.com/en_US/i/scr/pixel.gif", :width => "1"}
+      = haml :about
 
     = haml :footer

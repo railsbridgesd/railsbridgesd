@@ -1,19 +1,23 @@
-.row
-  .col-md-12
-    .schedule-block.mailing-list
-      %h2 Upcoming Workshops
-      %p We haven't announced the dates for the next RailsBridge workshop in San Diego, but you can sign up for our mailing list below to get notified about the next event.
-      %form
-        %h3
-          %i.fa.fa-envelope-o
-          %span Email
-        .form-inline
-          .form-group
-            %input.form-control{type: "email", name: "email", id: "subscribe_email"}
-          %span.messages
-            %button.btn.btn-primary{type: "submit"} Subscribe
-            %span.message-success You have subscribed to the mailing list!
-            %span.message-fail Sorry. Something went wrong. Please try again!
-            %span.message-email Sorry. Please enter a valid email address!
-            %span.loading
-              = image_tag "/assets/spinner.svg"
+.container
+  .row
+    .col-md-12
+      %h1 Schedule
+  .row
+    .col-md-12
+      .schedule-block.mailing-list
+        %h2 Upcoming Workshops
+        %p We haven't announced the dates for the next RailsBridge workshop in San Diego, but you can sign up for our mailing list below to get notified about the next event.
+        %form
+          %h3
+            %i.fa.fa-envelope-o
+            %span Email
+          .form-inline
+            .form-group
+              %input.form-control{type: "email", name: "email", id: "subscribe_email"}
+            %span.messages
+              %button.btn.btn-primary{type: "submit"} Subscribe
+              %span.message-success You have subscribed to the mailing list!
+              %span.message-fail Sorry. Something went wrong. Please try again!
+              %span.message-email Sorry. Please enter a valid email address!
+              %span.loading
+                = image_tag "/assets/spinner.svg"
