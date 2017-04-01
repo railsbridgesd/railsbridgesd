@@ -7,7 +7,7 @@ $(document).ready(function(){
   $(document).on("scroll", function(){
     var currentPos = $(this).scrollTop();
 
-    if (currentPos > 550) {
+    if (currentPos > 525) {
       $(".navbar").addClass("scrolled");
     } else {
       $(".navbar").removeClass("scrolled");
