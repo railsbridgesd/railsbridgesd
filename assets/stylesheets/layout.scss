@@ -16,7 +16,7 @@ body {
     font-weight: bold;
     padding-left: 50px;
     margin-left: 0px !important;
-    &:hover {
+    &:hover, &:focus, &:active {
       color: #fff;
     }
   }
@@ -28,6 +28,9 @@ body {
       background-repeat: no-repeat;
       background-size: 18%;
       color: $peach;
+      &:hover, &:focus, &:active {
+        color: $peach;
+      }
     }
   }
   &.navbar-default {
