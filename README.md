@@ -43,6 +43,23 @@ In production, you will need to run the following command:
 
 To test how mailing list works in development, you can force the mailing list to show, even if there is a valid future date for the `NEXT_RAILSBRIDGE`, by going to http://localhost:3000/?list=show.
 
+## Deploy the app
+
+1. `heroku git:remote -a railsbridgesd` to add a Heroku remote.
+2. Set heroku config variables:
+3. Add required ENV variables to Heroku:   
+   ```
+   heroku config:set CONTACT_EMAIL=  
+   heroku config:set GMAIL_USERNAME=
+   heroku config:set GMAIL_PASSWORD=
+   heroku config:set MAILCHIMP_KEY=
+   heroku config:set MAILCHIMP_LIST=
+   heroku config:set NEXT_RAILSBRIDGE=
+   ```
+   
+   To get a quick list of local `.env` variables (which might have some values you need), run 
+   `cat .env` from your root app directory.
+   
 ## Gotchas
 
 - If you can't install the bundle, you might be missing the `bundler` gem.
