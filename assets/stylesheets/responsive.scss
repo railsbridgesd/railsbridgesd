@@ -90,11 +90,16 @@
 }
 
 // iPhone 7/6 and smaller
-@media (max-width: 376px) {
+@media (max-width: 375px) {
   
   // Hide carousel controls
   .carousel-control {
     display: none;
+  }
+  
+  // Decrease H1 size on iPhone 7/6 and below
+  h1 {
+    font-size: 24px;
   }
   
 }
