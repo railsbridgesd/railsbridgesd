@@ -38,6 +38,12 @@
 
 // iPad Pro and smaller
 @media (max-width: 1024px) {
+
+  // Remove #intro headline text wrap on smaller screens
+  #intro h2 span {
+    display: inline;
+  }
+  
 }
 
 // Smaller than iPad
