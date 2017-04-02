@@ -36,8 +36,18 @@
   }
 }
 
-// iPad and below
-@media (max-width: 768px) {
+// iPad Pro and smaller
+@media (max-width: 1024px) {
+}
+
+// Smaller than iPad
+// (when the mobile navbar appears)
+@media (max-width: 767px) {
+  
+  // Increase left margin on railsbridge icon in header
+  .navbar .navbar-brand {
+    margin-left: 5px !important;
+  }
   
   // Push header image below navbar
   #header {
@@ -46,7 +56,7 @@
   
 }
 
-// iPhone 7/6 and below
+// iPhone 7/6 and smaller
 @media (max-width: 376px) {
   
   // Hide carousel controls
