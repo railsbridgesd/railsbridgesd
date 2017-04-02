@@ -4,7 +4,7 @@
       %h1 Sponsors
       %p We couldn't do any of this without the help of the San Diego tech community. Thanks to all of our awesome sponsors!
       %hr
-      .carousel.slide.lazy#sponsorsCarousel{:data => {:ride => "carousel"}}
+      .carousel.slide.lazy#sponsors_slideshow{:data => {:ride => "carousel"}}
         .carousel-inner
           .item.active
             %h2 Event Sponsor
@@ -36,9 +36,9 @@
             = link_to image_tag("/assets/sponsors/specialthanks1.png", class: "img-responsive sdruby", lazy: "true"), "https://www.meetup.com/sdruby/", lazy: "true"
 
 
-        %a.left.carousel-control{href: "#sponsorsCarousel", data: {:slide => "prev"}}
+        %a.left.carousel-control{href: "#sponsors_slideshow", data: {:slide => "prev"}}
           %i.glyphicon.glyphicon-chevron-left
-        %a.right.carousel-control{href: "#sponsorsCarousel", data: {:slide => "next"}}
+        %a.right.carousel-control{href: "#sponsors_slideshow", data: {:slide => "next"}}
           %i.glyphicon.glyphicon-chevron-right
       %hr
       %p
