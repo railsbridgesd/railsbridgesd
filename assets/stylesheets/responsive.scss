@@ -1,8 +1,9 @@
 
 // RESPONSIVE
 
-// Tweak navbar toggle colors
-.navbar-default .navbar-toggle {
+// Tweak navbar toggle colors (on peach/non-scrolled navbar)
+.navbar .navbar-toggle {
+  
   // Make icon bars white (default)
   .icon-bar {
     background-color: $white;
@@ -22,6 +23,32 @@
       background-color: $white;
     }
   }
+  
+}
+
+// Tweak navbar toggle colors (on white/scrolled navbar)
+.navbar.scrolled .navbar-toggle {
+  
+  // Make icon bars white (default)
+  .icon-bar {
+    background-color: $peach;
+  }
+  // When tapped, make background white and icon bars peach
+  &:hover {
+    background-color: $peach;
+    .icon-bar {
+      background-color: $white;
+    }
+  }
+  // When collapsed, make background peach and icon bars white 
+  // (switches back to default colors after closing navbar menu)
+  &.collapsed {
+    background-color: $white;
+    .icon-bar {
+      background-color: $peach;
+    }
+  }
+
 }
 
 // Schedule event blocks should always have the same height
