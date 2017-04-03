@@ -110,6 +110,14 @@
     margin-top: 50px !important;
   }
   
+  // Left align mobile nav links
+  .navbar-nav.pull-right {
+    float: none !important;
+    li {
+      padding-left: 40px;
+    }
+  }
+
   // Decrease left and right padding on .event
   #schedule .event {
     margin: 16px 0;
