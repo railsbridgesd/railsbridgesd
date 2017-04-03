@@ -9,31 +9,39 @@
           .item.active
             %h2 Event Sponsor
             %h3 Diamond Level
-            = link_to image_tag("/assets/sponsors/diamond1.png", class: "img-responsive amazon"), "https://www.amazon.jobs/en/locations/sandiego?base_query=&loc_query=&job_count=10&result_limit=10&sort=relevant&location%5B%5D=sandiego&cache"
+            .row
+              .col-md-4.col-xs-3
+              .col-md-4.col-xs-6
+                = link_to image_tag("/assets/sponsors/amazon.png", class: "img-responsive amazon"), "https://www.amazon.jobs/en/locations/sandiego?base_query=&loc_query=&job_count=10&result_limit=10&sort=relevant&location%5B%5D=sandiego&cache"
+              .col-md-4.col-xs-3
           .item
             %h2 Event Sponsor
             %h3 Silver Level
             .row
-              .col-xs-2
-              .col-xs-4
-                = link_to image_tag("/assets/sponsors/silver1.png", class: "img-responsive appfolio", lazy: "true"), "https://www.appfolio.com"
-              .col-xs-4
-                = link_to image_tag("/assets/sponsors/silver2.png", class: "img-responsive planningcenter", lazy: "true"), "https://planning.center", lazy: "true"
-              .col-xs-2
+              .col-md-2.col-xs-1
+              .col-md-4.col-xs-5
+                = link_to image_tag("/assets/sponsors/appfolio.png", class: "img-responsive appfolio", lazy: "true"), "https://www.appfolio.com"
+              .col-md-4.col-xs-5
+                = link_to image_tag("/assets/sponsors/planningcenter.png", class: "img-responsive planningcenter", lazy: "true"), "https://planning.center", lazy: "true"
+              .col-md-2.col-xs-1
           .item
             %h2 Annual Sponsor
             %h3 Platinum Level
             .row
-              .col-xs-2
-              .col-xs-4
-                = link_to image_tag("/assets/sponsors/platinum1.png", class: "img-responsive learn", lazy: "true"), "https://www.learnacademy.org", lazy: "true"
-              .col-xs-4
-                = link_to image_tag("/assets/sponsors/platinum2.png", class: "img-responsive procore", lazy: "true"), "https://www.procore.com", lazy: "true"
-              .col-xs-2
+              .col-md-2.col-xs-1
+              .col-md-4.col-xs-5
+                = link_to image_tag("/assets/sponsors/learn.png", class: "img-responsive learn", lazy: "true"), "https://www.learnacademy.org", lazy: "true"
+              .col-md-4.col-xs-5
+                = link_to image_tag("/assets/sponsors/procore.png", class: "img-responsive procore", lazy: "true"), "https://www.procore.com", lazy: "true"
+              .col-md-2.col-xs-1
           .item
             %h2 Special Thanks
             %h3
-            = link_to image_tag("/assets/sponsors/specialthanks1.png", class: "img-responsive sdruby", lazy: "true"), "https://www.meetup.com/sdruby/", lazy: "true"
+            .row
+              .col-md-4.col-xs-3
+              .col-md-4.col-xs-6
+                = link_to image_tag("/assets/sponsors/sdruby.png", class: "img-responsive sdruby", lazy: "true"), "https://www.meetup.com/sdruby/", lazy: "true"
+              .col-md-4.col-xs-3
 
 
         %a.left.carousel-control{href: "#sponsors_slideshow", data: {:slide => "prev"}}
@@ -42,7 +50,7 @@
           %i.glyphicon.glyphicon-chevron-right
       %hr
       %p
-        Want to become a sponsor? Download our 
+        Want to become a sponsor? Download our
         = link_to "sponsor prospectus", "/prospectus"
         and then
         #{link_to "contact us", "#footer", id: "contact_us_link"}.
