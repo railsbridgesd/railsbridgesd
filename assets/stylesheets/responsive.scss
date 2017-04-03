@@ -56,7 +56,7 @@
 
 }
 
-// Tweak sponsor block height and image margins
+// Tweak sponsor block height and image position
 @media (min-width: 1200px) {
 
   #sponsors .carousel {
@@ -70,6 +70,7 @@
 
 // Schedule event blocks should always have the same height
 @media (min-width: 992px) and (max-width: 1199px) {
+  
   #schedule {
     .event {
       height: 595px;
@@ -78,6 +79,7 @@
       height: auto;
     }
   }
+  
 }
 
 // Restyle navbar when wrapped to second line
@@ -205,15 +207,26 @@
     display: none;
   }
   
+  // Tweak sponsor block height and image position
+  #sponsors .carousel {
+    height: 210px;
+    img {
+      margin-top: -30px !important;
+      &.learn {
+        max-height: 90px !important;
+      }
+    }
+  }
+  
+  // Center donate button
+  #about form {
+    text-align: center;
+  }
+  
 }
 
 // iPhone 7/6 and smaller
 @media (max-width: 375px) {
-  
-  // Hide carousel controls
-  .carousel-control {
-    display: none;
-  }
   
   // Decrease H1 size on iPhone 7/6 and below
   h1 {
@@ -224,6 +237,14 @@
   h2,
   #schedule .event h2 {
     font-size: 18px;
+  }
+  
+  // Tweak sponsor block height and image position
+  #sponsors .carousel {
+    height: 200px;
+    img {
+      margin-top: -30px !important;
+    }
   }
   
 }
