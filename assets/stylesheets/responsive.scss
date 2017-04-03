@@ -1,6 +1,11 @@
 
 // RESPONSIVE
 
+// When adding new styles to this stylesheet, you should place styles that work at
+// ALL screen sizes at the very top of the stylesheet. Additional styles should be
+// placed below the top and organized by decreasing screen width, from the largest
+// width to the smallest width.
+
 // Tweak navbar toggle colors (on peach/non-scrolled navbar)
 .navbar .navbar-toggle {
   
