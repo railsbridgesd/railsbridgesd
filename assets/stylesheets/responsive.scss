@@ -68,6 +68,41 @@
   }
 }
 
+// Restyle navbar when wrapped to second line
+@media (min-width: 768px) and (max-width: 1154px) {
+
+  // Center nav menu links 
+  .navbar .navbar-inner {
+    padding: 0;
+  }
+  .navbar .nav {
+    margin: 0;
+    display: table;
+    width: 100%;
+    &.pull-right {
+      float: none !important;
+    }
+  }
+  .navbar .nav li {
+    display: table-cell;
+    float: none;
+    width: auto;
+  }
+  .navbar .nav li a {
+    text-align: center;
+    // Short code of conduct link to one word
+    span {
+      display: none;
+    }
+  }
+
+  // Push header image below navbar
+  #header {
+    margin-top: 100px !important;
+  }
+  
+}
+
 // iPad Pro and smaller
 @media (max-width: 1024px) {
 
@@ -76,6 +111,26 @@
     display: inline;
   }
   
+}
+
+// Restyle navbar when wrapped to second line
+@media (min-width: 768px) and (max-width: 943px) {
+
+  // Shrink nav menu links
+  .navbar .nav li a {
+    font-size: 14px;
+  }
+
+}
+
+// Restyle navbar when wrapped to second line
+@media (min-width: 768px) and (max-width: 786px) {
+
+  // Shrink nav menu links again
+  .navbar .nav li a {
+    font-size: 13px;
+  }
+
 }
 
 // iPad (only)
