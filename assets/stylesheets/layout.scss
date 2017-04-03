@@ -181,12 +181,8 @@ section {
     margin-top: -16px;
   }
   .carousel {
+    max-height: 300px;
     .carousel-inner {
-      height: 300px;
-      img {
-        max-height: 170px;
-        margin: 0 auto;
-      }
       h3, h2 {
         text-align: center;
       }
@@ -205,28 +201,26 @@ section {
       }
     }
   }
-  // img {
-  //   margin: 0 auto;
-  //   &.amazon {
-  //     height: 125px;
-  //   }
-  //   &.learn {
-  //     height: 120px;
-  //   }
-  //   &.procore {
-  //     margin-top: 50px;
-  //   }
-  //   &.appfolio {
-  //     margin-top: 25px;
-  //   }
-  //   &.planningcenter {
-  //     height: 90px;
-  //   }
-  //   &.sdruby {
-  //     height: 125px;
-  //     margin-bottom: -35px;
-  //   }
-  // }
+  img {
+    max-height: 130px;
+    margin-left: auto;
+    margin-right: auto;
+    &.amazon {
+    }
+    &.learn {
+    }
+    &.procore {
+      margin-top: 2.5vw;
+    }
+    &.appfolio {
+      margin-top: 1.1vw;
+    }
+    &.planningcenter {
+    }
+    &.sdruby {
+      margin-top: 2.2vw;
+    }
+  }
 }
 
 #volunteer {
