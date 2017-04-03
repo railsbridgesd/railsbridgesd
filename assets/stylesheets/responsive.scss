@@ -78,6 +78,16 @@
   
 }
 
+// iPad 
+@media (width: 768px) {
+  
+  // Set width of Twitter widget to 100%
+  .footer iframe.twitter-timeline {
+    max-width: 100% !important;
+  }
+  
+}
+
 // Smaller than iPad
 // (when the mobile navbar appears)
 @media (max-width: 767px) {
@@ -95,6 +105,11 @@
   // Decrease left and right padding on .event
   #schedule .event {
     margin: 16px 0;
+  }
+  
+  // Set width of Twitter widget to 100%
+  .footer iframe.twitter-timeline {
+    max-width: 100% !important;
   }
   
 }
