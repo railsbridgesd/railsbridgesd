@@ -78,8 +78,16 @@
   
 }
 
-// iPad 
+// iPad (only)
 @media (width: 768px) {
+  
+  // Tweak right padding on footer
+  .footer {
+    .col-md-5,
+    .col-md-6 {
+      padding-right: 25px;
+    }
+  }
   
   // Set width of Twitter widget to 100%
   .footer iframe.twitter-timeline {
