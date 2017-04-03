@@ -56,6 +56,18 @@
 
 }
 
+// Tweak sponsor block height and image margins
+@media (min-width: 1200px) {
+
+  #sponsors .carousel {
+    min-height: 260px;
+    .carousel-inner .item img {
+      margin-top: 20px !important;
+    }
+  }      
+
+}
+
 // Schedule event blocks should always have the same height
 @media (min-width: 992px) and (max-width: 1199px) {
   #schedule {
