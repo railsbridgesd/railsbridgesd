@@ -119,3 +119,12 @@
   }
   
 }
+
+// iPhone SE/5s/5 and smaller
+@media (max-width: 320px) {
+  
+  .footer select {
+    padding: 6px;
+  }
+  
+}
