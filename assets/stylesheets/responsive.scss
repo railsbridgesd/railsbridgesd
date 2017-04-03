@@ -117,6 +117,11 @@
       padding-left: 40px;
     }
   }
+  
+  // Show all nav links in dropdown menu
+  .navbar-collapse {
+    max-height: none;
+  }
 
   // Decrease left and right padding on .event
   #schedule .event {
