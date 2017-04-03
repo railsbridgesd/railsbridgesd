@@ -125,6 +125,11 @@
     display: inline;
   }
   
+  // Decrease #intro headline top margin
+  #intro h1 {
+    margin-top: 0;
+  }
+  
 }
 
 // Restyle navbar when wrapped to second line
