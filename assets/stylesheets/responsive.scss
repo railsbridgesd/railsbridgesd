@@ -59,10 +59,10 @@
 // Schedule event blocks should always have the same height
 @media (min-width: 992px) and (max-width: 1199px) {
   #schedule {
-    .schedule-block {
+    .event {
       height: 595px;
     }
-    .mailing-list {
+    #mailing-list {
       height: auto;
     }
   }
@@ -92,8 +92,8 @@
     margin-top: 50px !important;
   }
   
-  // Decrease left and right padding on .schedule-block
-  #schedule .schedule-block {
+  // Decrease left and right padding on .event
+  #schedule .event {
     margin: 16px 0;
   }
   
@@ -114,7 +114,7 @@
   
   // Decrease H2 size on iPhone 7/6 and below
   h2,
-  #schedule .schedule-block h2 {
+  #schedule .event h2 {
     font-size: 18px;
   }
   

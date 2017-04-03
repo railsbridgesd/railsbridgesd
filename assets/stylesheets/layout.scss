@@ -107,7 +107,7 @@ section {
 }
 
 #schedule {
-  .mailing-list {
+  #mailing-list {
     form {
       margin-bottom: 20px;
       .form-inline .form-control {
@@ -116,7 +116,7 @@ section {
       }
     }
   }
-  .schedule-block {
+  .event {
     background-color: rgba(255, 255, 255, .1);
     border-radius: .2em;
     margin: 12px 20px 30px 20px;

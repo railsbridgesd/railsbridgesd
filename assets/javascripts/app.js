@@ -26,37 +26,37 @@ $(document).ready(function(){
     }
   });
 
-  // Post to mailing list
-  $('.mailing-list button[type="submit"]').on('click', function(e) {
+  // Sign up to be notified about the next RailsBridge
+  $('#mailing-list button[type="submit"]').on('click', function(e) {
     e.preventDefault();
 
     var email = $('#subscribe_email').val();
-    $('.mailing-list .messages > span').hide();
+    $('#mailing-list .messages > span').hide();
 
     if (!validateEmail(email)) {
-      $('.mailing-list .messages .message-email').show();
+      $('#mailing-list .messages .message-email').show();
     } else {
       $.ajax({
         url: '/subscribe',
         method: 'POST',
         data: {email: email},
         beforeSend: function() {
-          $('.mailing-list span.loading').show();
+          $('#mailing-list span.loading').show();
         },
         success: function() {
-          $('.mailing-list .messages > span').hide();
-          $('.mailing-list .messages .message-success').show();
-          $('.mailing-list form').get(0).reset();
+          $('#mailing-list .messages > span').hide();
+          $('#mailing-list .messages .message-success').show();
+          $('#mailing-list form').get(0).reset();
         },
         error: function() {
-          $('.mailing-list .messages > span').hide();
-          $('.mailing-list .message-fail').show();
+          $('#mailing-list .messages > span').hide();
+          $('#mailing-list .message-fail').show();
         }
       });
     }
   });
 
-  // Post to email
+  // Send contact email
   $('.footer button[type="submit"]').on('click', function(e) {
     e.preventDefault();
 
