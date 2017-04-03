@@ -92,6 +92,11 @@
     margin-top: 50px !important;
   }
   
+  // Decrease left and right padding on .schedule-block
+  #schedule .schedule-block {
+    margin: 16px 0;
+  }
+  
 }
 
 // iPhone 7/6 and smaller
