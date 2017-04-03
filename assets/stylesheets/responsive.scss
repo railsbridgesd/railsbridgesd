@@ -188,6 +188,11 @@
     max-width: 100% !important;
   }
   
+  // Hide slideshow controls
+  .carousel-control {
+    display: none;
+  }
+  
 }
 
 // iPhone 7/6 and smaller
