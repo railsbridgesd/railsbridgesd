@@ -89,3 +89,7 @@ variables on Heroku.
 
 - If you can't install the bundle, you might be missing the `bundler` gem.
   - Run `gem install bundler` to install it.
+
+- Whenever we schedule a new RailsBridge San Diego, we will need to update all links
+on the site that point to the Bridgetroll event page for RailsBridge San Diego 
+(since each event has its own event page, unfortunately).
