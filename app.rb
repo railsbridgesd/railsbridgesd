@@ -106,7 +106,7 @@ class RailsBridgeSanDiego < Sinatra::Base
 
   # Homepage
   get '/' do
-    @active_workshop = (Time.now < (Time.parse(ENV['NEXT_RAILSBRIDGE']) + 1 * 259200) ? true : true)
+    @active_workshop = (Time.now < (Time.parse(ENV['NEXT_RAILSBRIDGE']) + 1 * 259200) ? true : false)
     haml :homepage
   end
 
