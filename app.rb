@@ -1,3 +1,4 @@
+require 'digest/md5'
 
 # VIEWS
 set :haml, :format => :html5, :attr_wrapper => '"'
@@ -34,7 +35,7 @@ def image_tag(image, options = {})
       options["data-src"] = options[:src]
       options.delete(:src)
   end
-  
+
   # Insert attributes into image tag
   attributes = " " + options.map{|k,v| k.to_s + "=" + '"' + v + '" '}.join(" ")
   "<img " + attributes + ">"
@@ -148,10 +149,10 @@ class RailsBridgeSanDiego < Sinatra::Base
     # Connect to MailChimp
     gibbon = Gibbon::Request.new(api_key: ENV["MAILCHIMP_KEY"])
 
-    # Add email to list
-    gibbon.lists(ENV["MAILCHIMP_LIST"]).members.create(body: {email_address: email, status: "subscribed"})
+    # Add email to list (and ignore if already subscribed)
+    gibbon.lists(ENV["MAILCHIMP_LIST"]).members(Digest::MD5.hexdigest(email)).upsert(body: {email_address: email, status: "subscribed"})
   end
-  
+
   # Download sponsorship prospectus
   get '/prospectus' do
     send_file File.join(settings.public_folder, 'downloads/RailsBridge_San_Diego_Sponsorship_Prospectus.pdf'), :type => 'application/pdf'
