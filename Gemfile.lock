@@ -21,7 +21,7 @@ GEM
     mustermann (1.0.2)
     pony (1.12)
       mail (>= 2.0)
-    rack (2.0.4)
+    rack (2.2.3)
     rack-protection (2.0.1)
       rack
     rack-rewrite (1.5.1)
