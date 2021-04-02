@@ -9,10 +9,10 @@ This is the website for http://www.railsbridgesd.org.
 2. `git clone git@github.com:railsbridgesd/railsbridgesd.git railsbridgesd`
 
 ### Configure the app and bundle install
-1. Switch to Ruby 2.4.4 with the Ruby version manager of your choice (this
+1. Switch to Ruby 2.7.1 with the Ruby version manager of your choice (this
 should happen automatically from the `.ruby-version` file)
 2. Create an environment config file: `cp .env.sample .env`
-3. Update `.env` variables:   
+3. Update `.env` variables:
    - CONTACT_EMAIL    - with email address where contact form emails will be sent
    - GMAIL_USERNAME   - with username for Gmail account used to send contact form email
    - GMAIL_PASSWORD   - with password for Gmail account used to send contact form email
@@ -62,34 +62,34 @@ to http://localhost:3000/?list=show.
 ## Deploy the app
 
 1. If you haven't already, download and install the Heroku CLI.
-2. Make sure you've been added as a collaborator to the railsbridgesd Heroku account. 
+2. Make sure you've been added as a collaborator to the railsbridgesd Heroku account.
 3. `heroku git:remote -a railsbridgesd` to add a git remote for Heroku.
 4. Once the remote is added, you can deploy with:
     - `heroku git push master`
 
-### Optional  
+### Optional
 
 If the app is already live, you can skip this step. But, if the app is being
 deployed for the very first time, you will need to set the following ENV
 variables on Heroku.
 
    ```
-   heroku config:set CONTACT_EMAIL=  
+   heroku config:set CONTACT_EMAIL=
    heroku config:set GMAIL_USERNAME=
    heroku config:set GMAIL_PASSWORD=
    heroku config:set MAILCHIMP_KEY=
    heroku config:set MAILCHIMP_LIST=
    heroku config:set NEXT_RAILSBRIDGE=
    ```
-   
+
    To get a quick list of local `.env` variables (which might have some values
    you need), run `cat .env` from your root app directory.
-   
+
 ## Gotchas
 
 - If you can't install the bundle, you might be missing the `bundler` gem.
   - Run `gem install bundler` to install it.
 
 - Whenever we schedule a new RailsBridge San Diego, we will need to update all links
-on the site that point to the Bridgetroll event page for RailsBridge San Diego 
+on the site that point to the Bridgetroll event page for RailsBridge San Diego
 (since each event has its own event page, unfortunately).
