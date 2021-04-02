@@ -2,7 +2,7 @@
 require 'rubygems'
 require 'sinatra'
 require 'haml'
-require 'sass'
+require 'sassc'
 require 'sprockets'
 require 'uglifier'
 require 'gibbon'
