@@ -1,0 +1,4 @@
+hosting: heroku
+email:
+  subscriptions: mailchimp
+  transactional: gmail
