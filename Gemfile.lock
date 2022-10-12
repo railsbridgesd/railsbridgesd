@@ -17,7 +17,7 @@ GEM
     faraday-excon (1.1.0)
     faraday-net_http (1.0.1)
     faraday-net_http_persistent (1.1.0)
-    ffi (1.15.1)
+    ffi (1.15.5)
     gibbon (3.4.0)
       faraday (>= 0.16.0)
       multi_json (>= 1.11.0)
@@ -71,7 +71,7 @@ DEPENDENCIES
   uglifier
 
 RUBY VERSION
-   ruby 2.7.3p183
+   ruby 2.7.5p203
 
 BUNDLED WITH
-   2.2.16
+   2.2.33

@@ -9,7 +9,7 @@ This is the website for http://www.railsbridgesd.org.
 2. `git clone git@github.com:railsbridgesd/railsbridgesd.git railsbridgesd`
 
 ### Configure the app and bundle install
-1. Switch to Ruby 2.7.1 with the Ruby version manager of your choice (this
+1. Switch to Ruby 2.7.5 with the Ruby version manager of your choice (this
 should happen automatically from the `.ruby-version` file)
 2. Create an environment config file: `cp .env.sample .env`
 3. Update `.env` variables:
