@@ -2,6 +2,7 @@
 
 This is the website for http://www.railsbridgesd.org.
 
+
 ## Getting started
 
 ### Clone the app
@@ -9,7 +10,7 @@ This is the website for http://www.railsbridgesd.org.
 2. `git clone git@github.com:railsbridgesd/railsbridgesd.git railsbridgesd`
 
 ### Configure the app and bundle install
-1. Switch to Ruby 2.7.5 with the Ruby version manager of your choice (this
+1. Switch to Ruby 2.7.7 with the Ruby version manager of your choice (this
 should happen automatically from the `.ruby-version` file)
 2. Create an environment config file: `cp .env.sample .env`
 3. Update `.env` variables:
@@ -24,6 +25,7 @@ should happen automatically from the `.ruby-version` file)
 ### Launch the app
 1. Run `bundle exec shotgun config.ru -p 3000`
 
+
 ## Contact form
 Users can contact RailsBridge San Diego using a contact form in the site footer.
 
@@ -36,6 +38,7 @@ wish to use to actually send the contact form emails.
 Note: at this time, we only support sending contact form emails via Gmail. But
 if you need to send emails with another email service, you could probably tweak
 the Pony configuration details in `app.rb`.
+
 
 ## Mailing list
 When there is no scheduled date for the next RailsBridge San Diego event, we
@@ -58,6 +61,7 @@ In production, you will need to run the following command:
 To test how mailing list works in development, you can force the mailing list to
 show, even if there is a valid future date for the `NEXT_RAILSBRIDGE`, by going
 to http://localhost:3000/?list=show.
+
 
 ## Deploy the app
 
@@ -84,6 +88,7 @@ variables on Heroku.
 
    To get a quick list of local `.env` variables (which might have some values
    you need), run `cat .env` from your root app directory.
+
 
 ## Gotchas
 
