@@ -20,9 +20,7 @@ class RailsBridgeSanDiego < Sinatra::Base
 
   # Configure for :production environment
   configure :production do
-
-    # Redirect requests to https in production
-    redirect request.url.sub("http", "https") unless request.secure?
+    enable :protection
   end
 
   # Configure for all environments
@@ -64,6 +62,13 @@ class RailsBridgeSanDiego < Sinatra::Base
         :domain               => "railsbridgesd.org"
       }
     }
+  end
+
+  # Redirect requests to https in production
+  before do
+    if settings.environment == :production && !request.secure?
+      redirect request.url.sub("http", "https")
+    end
   end
 
   # ROUTES
