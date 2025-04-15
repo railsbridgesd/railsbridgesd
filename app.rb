@@ -1,12 +1,14 @@
 require "digest/md5"
 require "haml"
 require "pony"
+require "rack/ssl-enforcer"
 require "sinatra/base"
 require "sprockets"
 require_relative "helpers"
 
 # APP
 class RailsBridgeSanDiego < Sinatra::Base
+  use Rack::SslEnforcer, only_environments: 'production'
   helpers Helpers
 
   # APP SETTINGS
