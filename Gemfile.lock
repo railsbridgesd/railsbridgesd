@@ -53,6 +53,7 @@ GEM
     rack-session (2.1.0)
       base64 (>= 0.1.0)
       rack (>= 3.0.0)
+    rack-ssl-enforcer (0.2.9)
     rackup (2.2.1)
       rack (>= 3)
     ruby2_keywords (0.0.5)
@@ -86,6 +87,7 @@ DEPENDENCIES
   haml
   pony
   rack-rewrite
+  rack-ssl-enforcer
   rackup
   sassc
   sinatra
