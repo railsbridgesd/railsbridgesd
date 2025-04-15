@@ -1,13 +1,14 @@
-source 'https://rubygems.org'
-ruby '2.7.7'
+source "https://rubygems.org"
+ruby "3.4.2"
 
-gem 'dotenv'
-gem 'gibbon'
-gem 'haml'
-gem 'pony'
-gem 'sassc'
-gem 'sinatra'
-gem 'shotgun'
-gem 'sprockets'
-gem 'rack-rewrite'
-gem 'uglifier'
+gem "foreman"
+gem "gibbon"
+gem "haml"
+gem "pony"
+gem "sassc"
+gem "sinatra"
+gem "sprockets"
+gem "rack-rewrite"
+gem "rackup"
+gem "uglifier"
+gem "webrick"
